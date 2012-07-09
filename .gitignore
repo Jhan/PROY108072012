@@ -4,4 +4,4 @@
 .springBeans
 target/**/*
 bin/**
-lib/**
+*.jar
