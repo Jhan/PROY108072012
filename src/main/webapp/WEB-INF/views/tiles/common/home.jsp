@@ -226,20 +226,44 @@
 			});
 
 			$('ul.container_12 li').click(function(){
-				$.getJSON("http://localhost:8080/sermeden/patient/find?idmedico=1",
-				  {
-				    tags: "mount rainier",
-				    tagmode: "any",
-				    format: "json"
-				  },
-				  function(data) {
-					  alert("LENGTH"+data.rows.length);
-				    $.each(data.items.rows.items, function(i,item){
-				    	alert(item.name);
-				      /*$("<img/>").attr("src", item.media.m).appendTo("#images");
-				      if ( i == 3 ) return false;*/
-				    });
-				  });	
+				var page = $(this).attr('page')+'.html';
+				
+				$('article.container_12').fadeOut("slow",function(){
+					$('article.container_12').empty(); 
+					$('article.container_12').load('http://localhost:8080/sermeden/pages/'+page, function(response, status, xhr){
+						if(status=="success"){
+	
+							if(page == "pacientesAsignados.html"){
+								var container = $('#pacientesAsignados').find('div.block-content');
+								var ulCont = container.append('<ul id="listCliente"></ul>').find('ul#listCliente').addClass("icon-list icon-user");
+								$.getJSON("http://localhost:8080/sermeden/patient/find?idmedico=1", function(data) {
+								  		
+								  	$.each(data.rows, function(i,item){
+								  		var liCont = ulCont.append('<li></li>').find('li:eq('+(i)+')');
+								  		liCont.append('<input type="hidden" id="dniPaciente" value="'+item.dni+'">');
+								  		liCont.append('<a href="javascript:void(0)"></a>').find('a').append('<span class="icon"></span>'+item.name+'<br> <small>'+item.lastname+'</small>');
+								  	});
+								  	$('ul#listCliente li').click(function() {
+								  		var dniPaciente = $(this).find('#dniPaciente').attr('value');
+								  		$('article.container_12').fadeOut("slow",function(){
+								  			$('article.container_12').empty(); 
+								  			$('article.container_12').load('http://localhost:8080/sermeden/pages/paciente.html', function(response, status, xhr){
+								  				if(status=="success"){
+													$.getJSON("http://localhost:8080/sermeden/patient/find?dni="+dniPaciente,function(data) {
+												  		$('section#paciente').find('h1#nomPaciente').append(data.rows[0].name+" "+data.rows[0].lastname);
+												  	});
+								  				}
+								  			});
+								  		});
+								  		$('article.container_12').fadeIn("5000");
+								  	});
+								  	container.append('<ul class="message no-margin"><li>'+data.rows.length+' Paciente asignados</li></ul>');
+								  });
+								
+							}
+						}
+					});
+				});$('article.container_12').fadeIn("5000");
 				//var page = $(this).attr('page')+'.html';	
 				/*$('article.container_12').fadeOut("slow",function(){
 					$('article.container_12').empty();

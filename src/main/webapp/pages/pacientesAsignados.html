@@ -1,57 +1,13 @@
-<section class="grid_12">
+<section id="pacientesAsignados" class="grid_12">
 	<div class="block-border">
 		<div class="block-content">
-			<h1>Pacientes asignadosa</h1>
-
-			<ul id="listCliente" class="icon-list icon-user">
-				<li>
-				<input type="hidden" id="codPaciente" value="45531331">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Jhan<br> <small>Rojas Buitron</small>
-				</a></li>
-				<li>
-				<input type="hidden" id="codPaciente" value="85831332">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Pamela<br> <small>Montero del Arca</small>
-				</a></li>
-				<li>
-				<input type="hidden" id="codPaciente" value="5542364">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Javier<br> <small>Araujo García</small>
-				</a></li>
-				<li>
-				<input type="hidden" id="codPaciente" value="PAC000003">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Pablo<br> <small>Poma Torres</small>
-				</a></li>
-				<li><input type="hidden" id="codPaciente" value="PAC000004">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Gustavo<br> <small>Correa Ramos</small>
-				</a></li>
-				<li><input type="hidden" id="codPaciente" value="PAC000005">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Gisela<br> <small>Escobar de la Aza</small>
-				</a></li>
-				<li>
-				<input type="hidden" id="codPaciente" value="PAC000006">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Rosa<br> <small>Escate del Arca</small>
-				</a></li>
-				<li>
-				<input type="hidden" id="codPaciente" value="PAC000007">
-				<a href="javascript:void(0)"> <span class="icon"></span>
-						Ricardo<br> <small>Palma</small>
-				</a></li>
-			</ul>
-			<ul class="message no-margin">
-				<li>7 Paciente asignados</li>
-			</ul>
+			<h1>Pacientes asignados</h1>
 		</div>
 	</div>
 </section>
 <script type="text/javascript">
-	$('ul#listCliente li').click(function() {
-		var dniPaciente = $(this).find('#codPaciente').attr('value');
+	//$('ul#listCliente li').click(function() {
+	//	var dniPaciente = $(this).find('#dniPaciente').attr('value');
 		
 		/*$('article.container_12').fadeOut("slow",function(){
 			$('article.container_12').empty();
@@ -61,5 +17,5 @@
 		
 		//Mediante ajax BUSCARPACIENTE(codPaciente) insertar valores a la pagina cargada
 		
-	});
+//	});
 </script>

@@ -3,12 +3,30 @@
 <mapper namespace="com.eomasoft.sermeden.persistence.PatientMapper">
 
 	<resultMap type="Patient" id="findByDniMapper">
+		<id column="PERSONA_ID" property="id" />
+		<result column="PERSONA_DNI" property="dni" />
+		<result column="PERSONA_NOMBRE" property="name" />
+		<result column="PERSONA_APELLIDO" property="lastname" />
+		
+		<result column="PACIENTE_EMAIL" property="email" />
+		<result column="PACIENTE_TEL_FIJO" property="tel_fijo" />
+		<result column="PACIENTE_TEL_CEL" property="tel_cel" />
 	</resultMap>
 	
 	<resultMap type="Patient" id="findByFullNameMapper">
 	</resultMap>
 	
 	<select id="findByDni" parameterType="String" resultMap="findByDniMapper">
+	SELECT 
+		   PS.ID AS 'PERSONA_ID',
+		   PS.DNI AS 'PERSONA_DNI',
+		   PS.NOMBRE AS 'PERSONA_NOMBRE',
+		   PS.APELLIDO AS 'PERSONA_APELLIDO',
+		   PC.EMAIL AS 'PACIENTE_EMAIL',
+		   PC.TEL_FIJO AS 'PACIENTE_TEL_FIJO',
+		   PC.TEL_CEL AS 'PACIENTE_TEL_CEL'
+		   FROM TBL_PERSONA PS INNER JOIN TBL_PACIENTE PC ON PS.ID = PC.ID
+		   WHERE PS.DNI = #{param1};
 	</select>
 	
 	<select id="findByFullName" parameterType="String" resultMap="findByFullNameMapper">
@@ -40,8 +58,8 @@
 		   PC.EMAIL AS 'PACIENTE_EMAIL',
 		   PC.TEL_FIJO AS 'PACIENTE_TEL_FIJO',
 		   PC.TEL_CEL AS 'PACIENTE_TEL_CEL'
-			FROM TBL_PERSONA PS INNER JOIN TBL_PACIENTE PC ON PS.ID = PC.ID
-	                    INNER JOIN TBL_MEDICO_PACIENTE MPC ON PC.ID = MPC.IDPACIENTE
-	                    WHERE MPC.IDMEDICO = #{param1};
+		   FROM TBL_PERSONA PS INNER JOIN TBL_PACIENTE PC ON PS.ID = PC.ID
+		   INNER JOIN TBL_MEDICO_PACIENTE MPC ON PC.ID = MPC.IDPACIENTE
+		   WHERE MPC.IDMEDICO = #{param1};
 	</select>
 </mapper>
