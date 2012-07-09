@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eomasoft.sermeden.persistence.UserMapper">
+
+	<resultMap id="findByUsernameMapper" type="User">	
+		<id column="USUARIO_ID" property="id" />
+		<result column="USUARIO_USUARIO" property="username" />
+		<result column="USUARIO_CONTRASENHA" property="password" />
+		<association property="person" javaType="Person">
+			<result column="PERSONA_DNI" property="dni" />
+			<result column="PERSONA_NOMBRE" property="name" />
+			<result column="PERSONA_APELLIDO" property="lastname" />
+		</association>
+		<association property="role" javaType="Role">
+			<result column="ROL_ID" property="id" />
+			<result column="ROL_DESCRIPCION" property="description" />
+		</association>
+	</resultMap>
+
+
+	<select id="findByUsername" parameterType="String" resultMap="findByUsernameMapper">
+
+		SELECT T2.ID AS 'USUARIO_ID',
+		T2.USUARIO AS 'USUARIO_USUARIO',
+		T2.CONTRASENHA AS 'USUARIO_CONTRASENHA',
+		T1.DNI AS 'PERSONA_DNI',
+		T1.NOMBRE AS 'PERSONA_NOMBRE',
+		T1.APELLIDO AS 'PERSONA_APELLIDO',
+		T3.ID AS 'ROL_ID',
+		T3.DESCRIPCION AS 'ROL_DESCRIPCION'
+		FROM TBL_PERSONA T1 INNER JOIN TBL_USUARIO T2 ON T1.ID = T2.FK_PERSONA
+							INNER JOIN TBL_ROL T3 ON T3.ID = T2.FK_ROL
+		WHERE T2.USUARIO = #{param1}
+	</select>
+</mapper>

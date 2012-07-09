@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	<!-- GLOBAL TEMPLATES -->
+	<definition name="tmpl/main" template="/WEB-INF/views/tiles/tmpl-main.jsp">
+		<put-attribute name="title" value="Sermeden - Servicio médico dental" />
+		<put-attribute name="header" value="/WEB-INF/views/tiles/common/header.jsp"/>
+		<put-attribute name="body" value="No content" />
+		<put-attribute name="footer" value="/WEB-INF/views/tiles/common/footer.jsp" />
+	</definition>
+	
+	<definition name="tmpl/content" template="/WEB-INF/views/tiles/tmpl-content.jsp">
+		<put-attribute name="content" value="No content" />
+	</definition>
+	
+	<definition name="tmpl/login" template="/WEB-INF/views/tiles/tmpl-login.jsp">
+		<put-attribute name="content" value="No content" />
+	</definition>
+</tiles-definitions>

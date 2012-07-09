@@ -1,0 +1,31 @@
+@CHARSET "utf-8";
+
+@IMPORT url("base.css");
+
+@IMPORT url("amazium.css");
+
+@IMPORT url("menu.css");
+
+@IMPORT url("form.css");
+
+@IMPORT url("validationEngine.jquery.css");
+
+.header {
+	background: #efefef;
+	border: 1px black solid;
+	border-top: 0;
+	padding: .4em 0;
+}
+
+.header .logo {
+	display: block;
+}
+
+.nav-horizontal {
+	border: 1px black solid;
+	border-top: 0;
+}
+
+.content{
+	padding: 1.5em;
+}

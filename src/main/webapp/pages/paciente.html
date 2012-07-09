@@ -1,0 +1,137 @@
+<section id="paciente" class="grid_12">
+	<div class="block-border">
+		<form class="block-content form" id="complex_form" method="post"
+			action="#">
+			<h1 id="nomCliente">Jhan Rojas Buitron</h1>
+			<div class="block-controls">
+
+				<ul class="controls-tabs js-tabs">
+					<li class="current"><a href="javascript:void(0)"
+						title="Charts"><img
+							src="img/icons/web-app/24/Bar-Chart.png" width="24"
+							height="24"></a></li>
+					<li><a href="javascript:void(0)" title="Comments"><img
+							src="img/icons/web-app/24/Comment.png" width="24" height="24"></a></li>
+					<li><a href="javascript:void(0)" title="Medias"><img
+							src="img/icons/web-app/24/Picture.png" width="24" height="24"></a></li>
+					<li><a href="javascript:void(0)" title="Users"><img
+							src="img/icons/web-app/24/Profile.png" width="24" height="24"></a></li>
+					<li><a href="javascript:void(0)" title="Informations"><img
+							src="img/icons/web-app/24/Info.png" width="24" height="24"></a></li>
+				</ul>
+
+			</div>
+
+			<ul class="message warning no-margin">
+				<li>This is a <strong>warning message</strong>, inside a box
+				</li>
+				<li class="close-bt"></li>
+			</ul>
+
+			<div class="columns">
+				<div class="col200pxL-left">
+					<div class="block-border" style="background: rgba(0, 0, 0, 0.32);width: 80%;"><img alt="" src="img/jhan.jpg" width="100%" height="100%"></div>
+					<ul id="mnuPaciente" class="side-tabs js-tabs same-height">
+						<li page="infPersonal"><a href="#tab-global" title="Global properties">Informacion Personal</a></li>
+						<li page="fichaEstomatologica"><a href="#tab-fichaEstomatologica" title="Language settings">Ficha Estomatológica</a></li>
+						<li><span>Intervencion</span></li>
+					</ul>
+
+				</div>
+				<div class="col200pxL-right">
+					<div id="tab-global" class="tabs-content" style="height: 500px"></div>
+					<div id="tab-fichaEstomatologica" class="tabs-content">Ficha Estomatológica</div>
+				</div>
+
+				<div class="col200pxL-bottom">
+					<p class="one-line-input grey-bg small-margin">
+						<label for="complex-switch-on" class="float-left">Small
+							switch on</label> <input type="checkbox" name="complex-switch-on"
+							id="complex-switch-on" value="1" class="mini-switch"
+							checked="checked">
+					</p>
+					<p class="one-line-input grey-bg clearfix">
+						<label for="complex-switch-off" class="float-left">Small
+							switch off</label> <input type="checkbox" name="complex-switch-off"
+							id="complex-switch-off" value="1" class="mini-switch">
+					</p>
+				</div>
+			</div>
+
+		</form>
+	</div>
+</section>
+<!-- <script src="js/mini5c1b.php?files=libs/jquery-1.6.3.min,old-browsers,jquery.accessibleList,searchField,common,standard,jquery.tip,libs/jquery.hashchange,jquery.contextMenu,list"></script> -->
+	<script>
+	$('body').find('input[type=radio].mini-switch, input[type=checkbox].mini-switch').hide().after('<span class="mini-switch-replace"></span>').next().click(function(){$(this).prev().click();}).prev('.with-tip').next().addClass('with-tip').each(function()
+			{$(this).attr('title',$(this).prev().attr('title'));});
+		// Search tip
+		$(document).ready(function()
+		{
+			$('#s').tip({
+				content: 'AJAX search! Try entering "add"',
+				onHover: false
+			});
+			
+			/*
+			 * Datepicker
+			 * Thanks to sbkyle! http://themeforest.net/user/sbkyle
+			 */
+			$('.datepicker').datepick({
+				alignment: 'bottom',
+				showOtherMonths: true,
+				selectOtherMonths: true,
+				renderer: {
+					picker: '<div class="datepick block-border clearfix form"><div class="mini-calendar clearfix">' +
+							'{months}</div></div>',
+					monthRow: '{months}',
+					month: '<div class="calendar-controls">' +
+								'{monthHeader:M yyyy}' +
+							'</div>' +
+							'<table cellspacing="0">' +
+								'<thead>{weekHeader}</thead>' +
+								'<tbody>{weeks}</tbody></table>',
+					weekHeader: '<tr>{days}</tr>',
+					dayHeader: '<th>{day}</th>',
+					week: '<tr>{days}</tr>',
+					day: '<td>{day}</td>',
+					monthSelector: '.month',
+					daySelector: 'td',
+					rtlClass: 'rtl',
+					multiClass: 'multi',
+					defaultClass: 'default',
+					selectedClass: 'selected',
+					highlightedClass: 'highlight',
+					todayClass: 'today',
+					otherMonthClass: 'other-month',
+					weekendClass: 'week-end',
+					commandClass: 'calendar',
+					commandLinkClass: 'button',
+					disabledClass: 'unavailable'
+				}
+			});
+		});
+	
+	</script>
+	
+	<script>
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10643639-3']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	  $('ul#mnuPaciente li').click(function(){
+		  	var page = $(this).attr('page');
+		  	 if(page != "infPersonal"){
+					$('div#tab-'+page).empty();
+					$('div#tab-'+page).load('http://localhost:8080/sermeden/pages/'+page+'.html');
+		  	 }
+
+	  });
+	</script>

@@ -1,0 +1,174 @@
+* {
+	border: 0pt none;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0pt;
+	padding: 0pt;
+	vertical-align: baseline;
+}
+
+.contHallazgo {
+	background:lightSteelBlue;
+	width: 100%;
+	height: 80px;
+}
+
+#listHallazgo {
+	height: 80px;
+	
+}
+
+ul#listHallazgo li {
+	cursor:pointer;
+	list-style-type: none;
+	float: left;
+	width: 50px;
+	height: 60px;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 1px;
+	padding: 10px 5px 10px 5px;
+}
+
+ul#listHallazgo li img {
+	width: 80%;
+	height: 70%;
+
+}
+ul#listHallazgo li span {
+	line-height: 12px;
+	text-align: center;
+	font-size: 10px;
+}
+/*POPUP*/
+.contPopup {
+	display: none;
+	background: white;
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	height: 30%;
+	width: 20%;
+	z-index: 1000;
+}
+
+.screem {
+	display: none;
+	position: absolute;
+	top: 0%;
+	height: 100%;
+	width: 100%;
+	opacity: 0.5;
+	z-index: 999;
+}
+
+.contDentadura {
+	margin: 10px 0px 0px 0px;
+	width: 100%;
+	height: 320px;
+	min-width: 800px;
+}
+
+.rowDiente {
+	background: lightBlue;
+	width: 100%;
+	height: 50%;
+	margin-top: 10px;
+}
+
+.pieza {
+	width: 60px;
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+.pieza:hover{
+	background: lightSteelBlue;
+}
+.imgPieza {
+	width: 40px;
+	height: 65px;
+	margin: 10px 10px 0px 10px;
+}
+
+.contSector {
+	background: white;
+	height: 40px;
+	width: 40px;
+	float: left;
+}
+
+.sectorh {
+	background: white;
+	height: 10px;
+	width: 38px;
+	border: solid 1px;
+}
+
+.contSectorv {
+	width: 40px;
+	height: 20px;
+}
+
+.sectorv {
+	background: white;
+	height: 20px;
+	width: 10px;
+	float: left;
+	border-left: solid 1px;
+}
+
+.nroPieza {
+	width: 100%;
+	height: 8%;
+	text-align: center;
+	margin: 10px 0px 10px 0px;
+}
+
+.imgCorona {
+	z-index: 500;
+	float: left;
+	position: relative;
+	width: 50px;
+	height: 56px;
+	left: 4px;
+	opacity: 0.5;
+}
+
+.contDiast {
+	width: 10px;
+	height: 50px;
+	margin-left: 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.contDiastDer {
+	width: 10px;
+	height: 50px;
+	margin-left: 0px;
+	float: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.contDetOdontograma{
+	display:none;
+	background:gray;
+	opacity:0.9;
+	position: absolute;
+	top: 90px;
+	left: 0px;
+	width:100%;
+	height: 100%;
+	z-index: 500;
+}
+.footer{
+	position:absolute;
+	width: 70%;
+	margin: 0% 15% 0% 15%;
+	background: black;
+	height: 8%;
+	top:92%;z-index: 501;
+}

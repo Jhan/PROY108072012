@@ -1,0 +1,65 @@
+@CHARSET "utf-8";
+
+.form {
+	font-family: sans-serif; 
+	width: 100%;
+}
+
+.form legend {
+	border-bottom: 1px solid black;
+	font-size: 1.5em;
+	padding-top: .5em;
+	width: 100%;
+}
+
+.form .wrapper-block {
+	font-family: Verdana;
+	font-size: .95em;
+	padding: .5em 0;
+}
+
+.form .first {
+	padding-top: 2em;
+}
+
+form .wrapper-block label {
+	line-height: .95em;
+	display: block;
+	float: left;
+	padding: 0 .5em;
+	text-align: right;
+	width: 150px;
+}
+
+form .small-label {
+	display: block;
+	color: #555;
+	font-size: .75em;
+	width: 150px;
+}
+
+form .small-label span{
+	font-size: .7em;
+}
+
+form .wrapper-block [type="text"],.wrapper-block [type="password"] {
+	border: solid 1px #bbbbbb;
+	line-height: .95em;
+	width: 166px;
+	padding: .25em;
+	margin-left: .5em;
+}
+
+form .action-block {
+	font-size: .85em;
+	text-align: center;
+}
+
+form .fieldset-messages{
+	background: #fafafa;
+	border: 1px black solid;
+	font-size: .85em;
+	margin-top: 1em;
+	min-height:3em;
+	padding: .5em;
+}

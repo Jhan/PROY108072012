@@ -1,0 +1,196 @@
+
+<section class="grid_12">
+<div class="block-border">
+	<div class="block-content">
+		<h1>Calendario Semanal</h1>
+
+		<div class="block-controls">
+			<ul class="controls-buttons">
+				<li><a href="javascript:void(0)" title="Previous week"><img
+						src="img/icons/fugue/navigation-180.png" width="16" height="16">
+				</a></li>
+				<li class="sep"></li>
+				<li class="controls-block">Semana 27</li>
+				<li class="sep"></li>
+				<li><a href="javascript:void(0)" title="Next week"><img
+						src="img/icons/fugue/navigation.png" width="16" height="16">
+				</a></li>
+			</ul>
+		</div>
+
+		<ul class="week-calendar no-margin">
+			<li class="week-cal-hours">
+				<div>
+					<span class="day">&nbsp;</span>
+				</div>
+				<ul>
+					<li><span>08:00</span></li>
+					<li><span>09:00</span></li>
+					<li><span>10:00</span></li>
+					<li><span>11:00</span></li>
+					<li><span>12:00</span></li>
+					<li><span>01:00</span></li>
+					<li><span>02:00</span></li>
+					<li><span>03:00</span></li>
+					<li><span>04:00</span></li>
+					<li><span>05:00</span></li>
+					<li><span>06:00</span></li>
+					<li><span>07:00</span></li>
+					<li><span>08:00</span></li>
+				</ul>
+			</li>
+
+			<li class="day1 weekend">
+				<div class="day">Domingo</div>
+				<ul>
+					<li class="lunch from-12 to-14"></li>
+				</ul>
+			</li>
+
+			<li class="day2">
+				<div class="day">
+					<ul class="dot-events with-children-tip">
+						<li class="red">Tax payment limit date</li>
+						<li><a href="javascript:void(0)">Check server hard drive
+								logs</a></li>
+					</ul>
+					Lunes
+				</div>
+				<ul>
+					<li class="lunch from-12 to-14"></li>
+					<li type="cita" class="evento from-9 to-12-00" fecha="02-07-2012" inicio="09:00" fin="12:00">
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Edit"><img
+									src="img/icons/fugue/pencil.png" width="16" height="16">
+							</a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img
+									src="img/icons/fugue/cross-circle.png" width="16" height="16">
+							</a></li>
+						</ul> <span class="event-time">09:00 - 12:00</span> Citas</li>
+					<li class="evento from-14 to-17 purple">
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Edit"><img
+									src="img/icons/fugue/pencil.png" width="16" height="16">
+							</a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img
+									src="img/icons/fugue/cross-circle.png" width="16" height="16">
+							</a></li>
+						</ul> <span class="event-time">14:00 - 17:00</span> Otro Evento</li>
+				</ul>
+			</li>
+
+			<li class="day3">
+				<div class="day">Martes</div>
+				<ul>
+					<li class="lunch from-12 to-14"></li>
+					<li type="cita" class="evento from-9 to-12-00" fecha="03-07-2012" inicio="09:00" fin="12:00">
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Edit"><img
+									src="img/icons/fugue/pencil.png" width="16" height="16">
+							</a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img
+									src="img/icons/fugue/cross-circle.png" width="16" height="16">
+							</a></li>
+						</ul> <span class="event-time">09:00 - 01:00</span> Citas</li>
+				</ul>
+			</li>
+
+			<li class="day4">
+				<div class="day">Miércoles</div>
+				<ul>
+					<li class="unavailable"></li>
+				</ul>
+			</li>
+
+			<li class="day5">
+				<div class="day">Jueves</div>
+				<ul>
+					<li class="unavailable from-9 to-11"></li>
+					<li class="lunch from-12 to-14"></li>
+					<li class="from-14-15 to-17-45 green">
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Edit"><img
+									src="img/icons/fugue/pencil.png" width="16" height="16">
+							</a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img
+									src="img/icons/fugue/cross-circle.png" width="16" height="16">
+							</a></li>
+						</ul> <span class="event-time">14:15 - 17:45</span> Otro Evento</li>
+				</ul>
+			</li>
+
+			<li class="day6">
+				<div class="day">Viernes</div>
+				<ul>
+					<li class="lunch from-12 to-14"></li>
+					<li class="from-10-15 to-11-45">
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Edit"><img
+									src="img/icons/fugue/pencil.png" width="16" height="16">
+							</a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img
+									src="img/icons/fugue/cross-circle.png" width="16" height="16">
+							</a></li>
+						</ul> <span class="event-time">10:15 - 11:45</span> Otro Evento</li>
+				</ul>
+			</li>
+
+			<li class="day7 weekend">
+				<div class="day">Sábado</div>
+				<ul>
+					<li class="lunch from-12 to-14"></li>
+				</ul>
+			</li>
+
+		</ul>
+	</div>
+</div>
+</section>
+<script type="text/javascript">
+	$('li.evento').click(function(){
+		var tipo = $(this).attr('type');
+		var fecha= $(this).attr('fecha');
+		var ini = 9;//$(this).attr('inicio');
+		var fin = 12;//$(this).attr('fin');
+		var cantItem = fin - ini;
+		var html = '<table cellspacing="0" class="list-calendar"><tbody>';
+		var htmlEnd = '</tbody></table>';
+
+		if(tipo=="cita"){
+			
+			for(var i=0; i<cantItem; i++){
+				var hora = "";
+				if(ini < 10){
+					hora = "0"+ini+":00";
+				}else{
+					hora = ini+":00";
+				}
+				
+				html += ''+
+				'<tr>'+
+					'<th scope="row">'+hora+'</th>'+
+					'<td>'+
+						'<ul class="events-dots-list">'+
+							'<li><a href="javascript:void(0)"><span></span> Paola Bermeo Molina '+ini+':00 - '+ini+':20</a></li>'+
+							'<li><a href="javascript:void(0)"><span></span> Caroline Sanchez Poma '+ini+':20 - '+ini+':40</a></li>'+
+							'<li><a href="javascript:void(0)"><span></span> Matias Torres Torres '+ini+':40 - '+(ini+1)+':00</a></li>'+
+						'</ul>'+
+					'</td>'+
+				'</tr>';
+				ini+=1;
+			}
+			html += htmlEnd;
+			$('article.container_12').fadeOut("slow",function(){
+				$('article.container_12').empty();
+				$('article.container_12').load('http://localhost:8080/sermeden/pages/agenda_horas.html');
+		
+			});
+			$('article.container_12').fadeIn("5000",function(){
+				$('#contEventos').append(html);
+			});
+
+			
+		}
+		
+	});
+</script>

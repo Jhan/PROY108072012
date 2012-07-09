@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eomasoft.sermeden.persistence.PatientMapper">
+
+	<resultMap type="Patient" id="findByDniMapper">
+	</resultMap>
+	
+	<resultMap type="Patient" id="findByFullNameMapper">
+	</resultMap>
+	
+	<select id="findByDni" parameterType="String" resultMap="findByDniMapper">
+	</select>
+	
+	<select id="findByFullName" parameterType="String" resultMap="findByFullNameMapper">
+	</select>
+	
+	<insert id="insert" parameterType="Patient" useGeneratedKeys="true" keyColumn="ID" keyProperty="id">
+	</insert>
+	
+	<update id="update" parameterType="Patient">
+	</update>
+	
+	
+	<resultMap id="findByIdMedicoMapper" type="Patient">	
+		<id column="PERSONA_ID" property="id" />
+		<result column="PERSONA_DNI" property="dni" />
+		<result column="PERSONA_NOMBRE" property="name" />
+		<result column="PERSONA_APELLIDO" property="lastname" />
+		
+		<result column="PACIENTE_EMAIL" property="email" />
+		<result column="PACIENTE_TEL_FIJO" property="tel_fijo" />
+		<result column="PACIENTE_TEL_CEL" property="tel_cel" />
+	</resultMap>
+	<select id="findByIdMedico" parameterType="int" resultMap="findByIdMedicoMapper">
+	SELECT 
+		   PS.ID AS 'PERSONA_ID',
+		   PS.DNI AS 'PERSONA_DNI',
+		   PS.NOMBRE AS 'PERSONA_NOMBRE',
+		   PS.APELLIDO AS 'PERSONA_APELLIDO',
+		   PC.EMAIL AS 'PACIENTE_EMAIL',
+		   PC.TEL_FIJO AS 'PACIENTE_TEL_FIJO',
+		   PC.TEL_CEL AS 'PACIENTE_TEL_CEL'
+			FROM TBL_PERSONA PS INNER JOIN TBL_PACIENTE PC ON PS.ID = PC.ID
+	                    INNER JOIN TBL_MEDICO_PACIENTE MPC ON PC.ID = MPC.IDPACIENTE
+	                    WHERE MPC.IDMEDICO = #{param1};
+	</select>
+</mapper>
