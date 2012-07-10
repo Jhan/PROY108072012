@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eomasoft.sermeden.persistence.OdontogramaMapper">
+
+	<select id="findByDniPaciente" parameterType="String" resultType="Diente">
+		SELECT D.*
+		FROM TBL_PERSONA PS
+		INNER JOIN TBL_PACIENTE PC 
+		    ON PS.ID = PC.ID
+		INNER JOIN TBL_HISTORIA_CLINICA HC
+		    ON PC.ID = HC.IDPACIENTE
+		INNER JOIN TBL_ESTOMATOLOGICA EST
+		    ON HC.ID = EST.IDHC
+		INNER JOIN TBL_DIENTE D
+		    ON EST.ID = D.IDESTOM
+		WHERE PS.DNI = #{param1};
+	</select>
+</mapper>

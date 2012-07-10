@@ -17,7 +17,7 @@
 
 #listHallazgo {
 	height: 80px;
-	
+	display: inline-block;
 }
 
 ul#listHallazgo li {
@@ -41,6 +41,7 @@ ul#listHallazgo li span {
 	line-height: 12px;
 	text-align: center;
 	font-size: 10px;
+	white-space: normal;
 }
 /*POPUP*/
 .contPopup {
@@ -64,25 +65,29 @@ ul#listHallazgo li span {
 	z-index: 999;
 }
 
-.contDentadura {
-	margin: 10px 0px 0px 0px;
+div#contDentadura {
+	overflow-x: visible;
+	overflow-y: hidden;
+	white-space: nowrap;
 	width: 100%;
-	height: 320px;
-	min-width: 800px;
+	height:350px;
+	margin-top: 20px;
 }
 
 .rowDiente {
 	background: lightBlue;
 	width: 100%;
-	height: 50%;
+	height: 160px;
 	margin-top: 10px;
+	display: inline-block;
 }
 
 .pieza {
 	width: 60px;
-	height: 100%;
-	float: left;
+	height: 160px;
+	/*float: left;*/
 	cursor: pointer;
+	display: inline-block;
 }
 .pieza:hover{
 	background: lightSteelBlue;
@@ -99,26 +104,38 @@ ul#listHallazgo li span {
 	width: 40px;
 	float: left;
 }
-
-.sectorh {
+.s1, .s5{
 	background: white;
 	height: 10px;
 	width: 38px;
 	border: solid 1px;
 }
+/*.sectorh {
+	background: white;
+	height: 10px;
+	width: 38px;
+	border: solid 1px;
+}*/
 
 .contSectorv {
 	width: 40px;
 	height: 20px;
 }
-
-.sectorv {
+.s2, .s3, .s4{
 	background: white;
 	height: 20px;
 	width: 10px;
 	float: left;
 	border-left: solid 1px;
 }
+/*
+.sectorv {
+	background: white;
+	height: 20px;
+	width: 10px;
+	float: left;
+	border-left: solid 1px;
+}*/
 
 .nroPieza {
 	width: 100%;
@@ -137,7 +154,22 @@ ul#listHallazgo li span {
 	opacity: 0.5;
 }
 
-.contDiast {
+div.pieza .ld {
+	width: 10px;
+	height: 50px;
+	margin-left: 0px;
+	float: left;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+div.pieza .li {
+	width: 10px;
+	height: 50px;
+	margin-left: 50px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+/*.contDiast {
 	width: 10px;
 	height: 50px;
 	margin-left: 50px;
@@ -152,7 +184,7 @@ ul#listHallazgo li span {
 	float: left;
 	background-size: contain;
 	background-repeat: no-repeat;
-}
+}*/
 .contDetOdontograma{
 	display:none;
 	background:gray;
@@ -171,4 +203,11 @@ ul#listHallazgo li span {
 	background: black;
 	height: 8%;
 	top:92%;z-index: 501;
+}
+/*incidencias*/
+.inc1{
+	background:rgb(150,50,50);
+}
+.inc6{
+	background:#1179e3;
 }

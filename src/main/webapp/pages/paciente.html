@@ -30,17 +30,18 @@
 
 			<div class="columns">
 				<div class="col200pxL-left">
-					<div class="block-border" style="background: rgba(0, 0, 0, 0.32);width: 80%;"><img alt="" src="img/jhan.jpg" width="100%" height="100%"></div>
+					<div class="block-border" style="background: rgba(0, 0, 0, 0.32);width: 80%;">
+					<img id="foto" alt="" src="" width="100%" height="200px"></div>
 					<ul id="mnuPaciente" class="side-tabs js-tabs same-height">
-						<li page="infPersonal"><a href="#tab-global" title="Global properties">Informacion Personal</a></li>
+						<li page="infPersonal" class="current"><a href="#tab-global" title="Global properties">Informacion Personal</a></li>
 						<li page="fichaEstomatologica"><a href="#tab-fichaEstomatologica" title="Language settings">Ficha Estomatológica</a></li>
 						<li><span>Intervencion</span></li>
 					</ul>
 
 				</div>
 				<div class="col200pxL-right">
-					<div id="tab-global" class="tabs-content" style="height: 500px"></div>
-					<div id="tab-fichaEstomatologica" class="tabs-content">Ficha Estomatológica</div>
+					<div id="tab-global" class="tabs-content" style="height: 500px; display: block;"></div>
+					<div id="tab-fichaEstomatologica" class="tabs-content" style="display: none;">Ficha Estomatológica</div>
 				</div>
 
 				<div class="col200pxL-bottom">
@@ -127,10 +128,70 @@
 	  })();
 	
 	  $('ul#mnuPaciente li').click(function(){
-		  	var page = $(this).attr('page');
-		  	 if(page != "infPersonal"){
+		  	var page = $(this).attr('page');alert(page);
+		  	 if(page == "fichaEstomatologica"){
+		  		 	var dniPaciente = $('section#paciente').find('#PacienteDni').attr('value');
+		  		 	
 					$('div#tab-'+page).empty();
-					$('div#tab-'+page).load('http://localhost:8080/sermeden/pages/'+page+'.html');
+					$('div#tab-'+page).load('http://localhost:8080/sermeden/pages/fichaEstomatologica.html', function(response, status, xhr){
+						if(status=="success"){
+							$.getJSON("http://localhost:8080/sermeden/json/hallazgos.json",function(data) {
+							    $.each(data.hallazgos, function(i,item){
+									var html = '<li><input id="idHallazgo" type="hidden" value="'+item.id+'"/><img src="'+item.src_img+'" title="'+item.nombre+'"/><br><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/></li>';
+									$('#listHallazgo').append(html);
+								//<img src="'+item.src_img+'"/><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/>
+							    });
+							});
+							
+							$.getJSON("http://localhost:8080/sermeden/odontograma/find?dniPaciente="+dniPaciente,function(data) {
+								$.each(data.rows, function(i,item){
+									var html = 
+										'<div id="'+item.id+'" class="pieza" pieza="'+item.nro+'" estado="'+item.estado+'">'+
+											'<input id="ubicacion" type="hidden" value="sup"/>'+
+											'<img alt="" src="img/odontograma/'+item.tipo+'.png" class="imgPieza">'+
+											'<div class="ld"></div>'+
+											'<div class="contSector">'+
+												'<div class="s1"/>'+
+												'<div class="contSectorv">'+
+													'<div class="s2"/>'+
+													'<div class="s3" style="width: 16px;"/>'+
+													'<div class="s4" style="border-right: solid 1px;"/>'+
+												'</div>'+
+												'<div class="s5"/>'+
+											'</div>'+
+											'<div class="li"></div>'+
+											'<div class="nroPieza"><span>'+item.nro+'</span></div>'+
+										'</div>';
+									if(item.nro <= 16){$('#superior').append(html);}else{$('#inferior').append(html);}
+										
+										if(item.estado != 2){
+											if(item.c_inc != null && item.c_inc != 0){
+												$('div#'+item.id).append('<img inc="'+item.c_inc+'" est="'+item.c_est+'" src="img/odontograma/incidencias/'+item.c_inc+'.png" class="imgCorona" style="top: -90px;"/>');
+											}
+											if(item.s1_inc != null && item.s1_inc != 0){
+												var s = $('div#'+item.id).find('div.s1');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s1_inc, "est":item.s1_est});
+											}
+											if(item.s2_inc != null && item.s2_inc != 0){
+												var s = $('div#'+item.id).find('div.s2');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s2_inc, "est":item.s2_est});
+											}
+											if(item.s3_inc != null && item.s3_inc != 0){
+												var s = $('div#'+item.id).find('div.s3');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s3_inc, "est":item.s3_est});
+											}
+											if(item.s4_inc != null && item.s4_inc != 0){
+												var s = $('div#'+item.id).find('div.s4');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s4_inc, "est":item.s4_est});
+											}
+											if(item.s5_inc != null && item.s5_inc != 0){
+												var s = $('div#'+item.id).find('div.s5');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s5_inc, "est":item.s5_est});
+											}	
+										}else{
+											$('div#'+item.id).append('<img src="img/odontograma/incidencias/4.png" class="imgCorona" style="top: -90px;"/>');
+											$('div#'+item.id).css({"opacity":"0.2"});
+										}								
+									
+								});
+							});
+						}
+					});
 		  	 }
 
 	  });

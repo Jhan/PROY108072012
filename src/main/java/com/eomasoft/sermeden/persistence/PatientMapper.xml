@@ -11,6 +11,7 @@
 		<result column="PACIENTE_EMAIL" property="email" />
 		<result column="PACIENTE_TEL_FIJO" property="tel_fijo" />
 		<result column="PACIENTE_TEL_CEL" property="tel_cel" />
+		<result column="PACIENTE_URLFOTO" property="url_foto"/>
 	</resultMap>
 	
 	<resultMap type="Patient" id="findByFullNameMapper">
@@ -24,7 +25,8 @@
 		   PS.APELLIDO AS 'PERSONA_APELLIDO',
 		   PC.EMAIL AS 'PACIENTE_EMAIL',
 		   PC.TEL_FIJO AS 'PACIENTE_TEL_FIJO',
-		   PC.TEL_CEL AS 'PACIENTE_TEL_CEL'
+		   PC.TEL_CEL AS 'PACIENTE_TEL_CEL',
+		   PC.URLFOTO AS 'PACIENTE_URLFOTO'
 		   FROM TBL_PERSONA PS INNER JOIN TBL_PACIENTE PC ON PS.ID = PC.ID
 		   WHERE PS.DNI = #{param1};
 	</select>

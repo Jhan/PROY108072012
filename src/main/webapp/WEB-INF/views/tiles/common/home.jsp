@@ -11,7 +11,7 @@
 	<script>
 		
 		// Add listener for tab
-		$('#tab-stats').onTabShow(function() { drawVisitorsChart(); }, true);
+		$('#tab-stats').onTabShow(function() { /*drawVisitorsChart();*/ }, true);
 		
 		// Handle viewport resizing
 		var previousWidth = $(window).width();
@@ -19,12 +19,12 @@
 		{
 			if (previousWidth != $(window).width())
 			{
-				drawVisitorsChart();
+				/* drawVisitorsChart(); */
 				previousWidth = $(window).width();
 			}
 		});
 		
-		// Demo chart
+/* 		// Demo chart
 		function drawVisitorsChart() {
 
 			// Create our data table.
@@ -69,7 +69,7 @@
 			// Message
 			notify('Chart updated');
 		};
-		
+		 */
 	</script>
 	
 	<script>
@@ -250,7 +250,9 @@
 								  			$('article.container_12').load('http://localhost:8080/sermeden/pages/paciente.html', function(response, status, xhr){
 								  				if(status=="success"){
 													$.getJSON("http://localhost:8080/sermeden/patient/find?dni="+dniPaciente,function(data) {
+														$('section#paciente').append('<input id="PacienteDni" type="hidden" value="'+data.rows[0].dni+'">');
 												  		$('section#paciente').find('h1#nomPaciente').append(data.rows[0].name+" "+data.rows[0].lastname);
+												  		$('section#paciente').find('img#foto').attr({"src":"img/foto/"+data.rows[0].url_foto});
 												  	});
 								  				}
 								  			});

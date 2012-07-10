@@ -8,7 +8,14 @@ public class Patient extends Person{
 	private String email;
 	private String tel_fijo;
 	private String tel_cel;
+	private String url_foto;
 	
+	public String getUrl_foto() {
+		return url_foto;
+	}
+	public void setUrl_foto(String url_foto) {
+		this.url_foto = url_foto;
+	}
 	public String getEmail() {
 		return email;
 	}

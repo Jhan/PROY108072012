@@ -106,7 +106,7 @@ $(document).ready(function(){
 		arrayDentSup.push(objDiente);
 		return ''+
 		'<div class="pieza" id="pieza'+contDiente+'" nro="'+contDiente+'">'+
-		'<input id="ubicacion" type="hidden" value="inf"/>'+
+			'<input id="ubicacion" type="hidden" value="inf"/>'+
 			'<div class="nroPieza"><span>'+contDiente+'</span></div>'+
 			'<div class="contDiastDer"></div>'+
 			'<div class="contSector">'+
@@ -126,7 +126,7 @@ $.ajax({
 	dataType : 'json',
 	success : function(data) {
 	    $.each(data.hallazgos, function(i,item){
-			var html = '<li><input id="idHallazgo" type="hidden" value="'+item.id+'"/><img src="'+item.src_img+'" title="'+item.nombre+'"/><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/></li>';
+			var html = '<li><input id="idHallazgo" type="hidden" value="'+item.id+'"/><img src="'+item.src_img+'" title="'+item.nombre+'"/><br><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/></li>';
 			$('#listHallazgo').append(html);
 		//<img src="'+item.src_img+'"/><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/>
 	    });
@@ -178,7 +178,7 @@ function registrarHallazgo() {
 	var tipoHallazgo = $("div#modal").find('#tipoHallazgo').attr('value');
 	
 	var searchPieza = "div#pieza"+nroPieza;
-	var elemPieza = $("div.contDentadura").find(searchPieza);
+	var elemPieza = $("div#contDentadura").find(searchPieza);
 	var piezaSupOrInf = $(elemPieza).find("#ubicacion").attr('value');
 	//var dieAusente = arrayDentSup[nroPieza-1].ausente;
 	//var your_object = JSON.stringify(arrayDentSup);
@@ -187,12 +187,12 @@ function registrarHallazgo() {
 	    if(tipoHallazgo=="sec"){
 	    	var nroSector = $(arrayElemInputPop[1]).attr('value');
 	    	var searchSec = "div#"+nroSector;
-	    	$("div.contDentadura").find(searchPieza).find(searchSec).css({"background":"rgb(150,50,50)"});
+	    	$("div#contDentadura").find(searchPieza).find(searchSec).css({"background":"rgb(150,50,50)"});
 	    }
 	    if(tipoHallazgo=="rest"){
 	    	var nroSector = $(arrayElemInputPop[1]).attr('value');
 	    	var searchSec = "div#"+nroSector;
-	    	$("div.contDentadura").find(searchPieza).find(searchSec).css({"background":"#1179e3"});
+	    	$("div#contDentadura").find(searchPieza).find(searchSec).css({"background":"#1179e3"});
 	    }
 	    if(tipoHallazgo=="cor"){
 		    if(piezaSupOrInf=="sup")createImgCorSup(elemPieza,srcHallazgo);
@@ -200,9 +200,9 @@ function registrarHallazgo() {
 	    }
 	    if(tipoHallazgo=="par"){
 	    	var nroPieza2 = $("div#modal").find('#piezaIzq').attr('value');
-	    	var elemPieza1 = $("div.contDentadura").find("div#pieza"+nroPieza);
+	    	var elemPieza1 = $("div#contDentadura").find("div#pieza"+nroPieza);
 	    	alert(nroPieza2);
-	    	var elemPieza2 = $("div.contDentadura").find("div#pieza"+nroPieza2);
+	    	var elemPieza2 = $("div#contDentadura").find("div#pieza"+nroPieza2);
 	    	$(elemPieza1).find(".contDiast").css({"background-image":"url(img/odontograma/diastemaIzq.png)"});
 	    	$(elemPieza2).find(".contDiastDer").css({"background-image":"url(img/odontograma/diastemaDer.png)"});
 
