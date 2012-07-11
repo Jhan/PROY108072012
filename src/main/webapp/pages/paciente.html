@@ -137,7 +137,7 @@
 						if(status=="success"){
 							$.getJSON("http://localhost:8080/sermeden/json/hallazgos.json",function(data) {
 							    $.each(data.hallazgos, function(i,item){
-									var html = '<li><input id="idHallazgo" type="hidden" value="'+item.id+'"/><img src="'+item.src_img+'" title="'+item.nombre+'"/><br><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/></li>';
+									var html = '<li id="'+item.id+'" niveluso="'+item.modo_uso+'" titulo="'+item.nombre+'"><img src="'+item.src_img+'" title="'+item.nombre+'"/><br><span>'+item.nombre+'</span></li>';
 									$('#listHallazgo').append(html);
 								//<img src="'+item.src_img+'"/><span>'+item.nombre+'</span><input id="modo_uso" type="hidden" value="'+item.modo_uso+'"/>
 							    });
@@ -146,7 +146,7 @@
 							$.getJSON("http://localhost:8080/sermeden/odontograma/find?dniPaciente="+dniPaciente,function(data) {
 								$.each(data.rows, function(i,item){
 									var html = 
-										'<div id="'+item.id+'" class="pieza" pieza="'+item.nro+'" estado="'+item.estado+'">'+
+										'<div id="pieza'+item.nro+'" cod="'+item.id+'" class="pieza" pieza="'+item.nro+'" estado="'+item.estado+'">'+
 											'<input id="ubicacion" type="hidden" value="sup"/>'+
 											'<img alt="" src="img/odontograma/'+item.tipo+'.png" class="imgPieza">'+
 											'<div class="ld"></div>'+
@@ -166,28 +166,51 @@
 										
 										if(item.estado != 2){
 											if(item.c_inc != null && item.c_inc != 0){
-												$('div#'+item.id).append('<img inc="'+item.c_inc+'" est="'+item.c_est+'" src="img/odontograma/incidencias/'+item.c_inc+'.png" class="imgCorona" style="top: -90px;"/>');
+												$('div#pieza'+item.id).append('<img id="corona" inc="'+item.c_inc+'" est="'+item.c_est+'" src="img/odontograma/incidencias/'+item.c_inc+'.png" class="imgCorona" style="top: -90px;"/>');
 											}
 											if(item.s1_inc != null && item.s1_inc != 0){
-												var s = $('div#'+item.id).find('div.s1');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s1_inc, "est":item.s1_est});
+												var s = $('div#pieza'+item.id).find('div.s1');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s1_inc, "est":item.s1_est});
 											}
 											if(item.s2_inc != null && item.s2_inc != 0){
-												var s = $('div#'+item.id).find('div.s2');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s2_inc, "est":item.s2_est});
+												var s = $('div#pieza'+item.id).find('div.s2');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s2_inc, "est":item.s2_est});
 											}
 											if(item.s3_inc != null && item.s3_inc != 0){
-												var s = $('div#'+item.id).find('div.s3');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s3_inc, "est":item.s3_est});
+												var s = $('div#pieza'+item.id).find('div.s3');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s3_inc, "est":item.s3_est});
 											}
 											if(item.s4_inc != null && item.s4_inc != 0){
-												var s = $('div#'+item.id).find('div.s4');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s4_inc, "est":item.s4_est});
+												var s = $('div#pieza'+item.id).find('div.s4');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s4_inc, "est":item.s4_est});
 											}
 											if(item.s5_inc != null && item.s5_inc != 0){
-												var s = $('div#'+item.id).find('div.s5');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s5_inc, "est":item.s5_est});
+												var s = $('div#pieza'+item.id).find('div.s5');s.addClass('inc'+item.s1_inc);s.attr({"inc":item.s5_inc, "est":item.s5_est});
 											}	
 										}else{
-											$('div#'+item.id).append('<img src="img/odontograma/incidencias/4.png" class="imgCorona" style="top: -90px;"/>');
-											$('div#'+item.id).css({"opacity":"0.2"});
+											$('div#pieza'+item.id).append('<img src="img/odontograma/incidencias/4.png" class="imgCorona" style="top: -90px;"/>');
+											$('div#pieza'+item.id).css({"opacity":"0.2"});
 										}								
-									
+								});
+								$("ul#listHallazgo li").click(function () {
+									var idHallazgo = $(this).attr('id');
+									var niveluso = $(this).attr('niveluso');
+									var titulo = $(this).attr('titulo');
+									openModal(titulo, "", niveluso, idHallazgo);
+									$('div.modal-content').append('<form class="block-content form" id="simple_form" method="post" action="#"></form>');
+									//0: Nivel Corona 1:PAR 2:SECTOR');
+									if(niveluso == 0){
+										$('div.modal-content').find('#simple_form')
+										.append('Pieza <input id="pieza" type="text" name="simple-required">');
+									}
+									if(niveluso == 1){
+										$('div.modal-content').find('#simple_form')
+										.append('Pieza Derecha <input id="ld" type="text" name="simple-required">')
+										.append('<br>')
+										.append('Pieza Izquierda <input id="li" type="text" name="simple-required">');
+									}
+									if(niveluso == 2){
+										$('div.modal-content').find('#simple_form')
+										.append('Pieza <input id="pieza" type="text" name="simple-required">')
+										.append('<br>')
+										.append('Sector <input id="sector" type="text" name="simple-required">');
+									}
 								});
 							});
 						}
@@ -195,4 +218,59 @@
 		  	 }
 
 	  });
+	  function openModal(titulo, contenido, niveluso, idHallazgo)
+	  {
+	  	$.modal({
+	  		content: contenido,
+	  		title: titulo,
+	  		maxWidth: 500,
+	  		buttons: {
+	  			'Guardar': function(win) { registrarHallazgo(niveluso,idHallazgo, win); },
+	  			'Cerrar': function(win) { win.closeModal(); }
+	  		}
+	  	});
+	  }
+	  function registrarHallazgo(niveluso, idHallazgo, win) {
+		  	var img = $('div#contHallazgo').find('li#'+idHallazgo).find('img').attr('src');
+			if(niveluso == 0){	
+				var pieza = $('div.modal-content').find('#simple_form').find('#pieza').attr('value');
+				var ePieza = $("div#contDentadura").find('div#pieza'+pieza);
+				var c_est = $(ePieza).find('.imgCorona').attr('est');
+				if(c_est==null){
+					/*jQuery.ajax({
+				          url: "",
+				          type: "POST",
+				          data: {name: "amit", id:1 },
+				          dataType: "json",
+				          beforeSend: function(x) {
+				            if (x && x.overrideMimeType) {
+				              x.overrideMimeType("application/j-son;charset=UTF-8");
+				            }
+				          },
+				          success: function(result) {
+				 	     //Write your code here
+				          }
+					});*/
+					if(idHallazgo==4){$(ePieza).css({"opacity":"0.2"});}
+					ePieza.append('<img src="'+img+'" class="imgCorona" style="top: -90px;"/>');
+					win.closeModal();
+				}else{
+					alert("Ya continene un hallazgo");
+				}
+			}
+			if(niveluso == 1){
+				var ld = $('div.modal-content').find('#simple_form').find('#ld').attr('value');
+				var li = $('div.modal-content').find('#simple_form').find('#li').attr('value');
+				$("div#contDentadura").find('div#pieza'+ld).find('div.li').css({"background-image":"url(img/odontograma/diastemaIzq.png)"});
+				$("div#contDentadura").find('div#pieza'+li).find('div.ld').css({"background-image":"url(img/odontograma/diastemaDer.png)"});
+				win.closeModal();
+			}
+			if(niveluso == 2){
+				var pieza = $('div.modal-content').find('#simple_form').find('#pieza').attr('value');
+				var sector = $('div.modal-content').find('#simple_form').find('#sector').attr('value');var color;
+				if(idHallazgo==1){color="rgb(150,50,50)"}if(idHallazgo==6){color="#1179e3"}
+				$("div#contDentadura").find('div#pieza'+pieza).find('div.s'+sector).css({"background":color});
+				win.closeModal();
+			}
+	  }
 	</script>

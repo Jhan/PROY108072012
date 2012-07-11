@@ -21,6 +21,17 @@ public class OdontogramaServiceImpl implements OdontogramaService {
 
 		return odontogramaMapper.findByDniPaciente(dniPaciente);
 	}
+
+	@Override
+	public Diente save(Diente diente) {
+		if(diente.getId() == null){
+			odontogramaMapper.insert(diente);
+		}else{
+			odontogramaMapper.update(diente);
+		}
+		return diente;
+	}
+	
 	@Inject
 	public void setOdontogramaMapper(OdontogramaMapper odontogramaMapper) {
 		this.odontogramaMapper = odontogramaMapper;

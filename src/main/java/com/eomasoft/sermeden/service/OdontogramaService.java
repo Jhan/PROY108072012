@@ -13,4 +13,6 @@ import com.eomasoft.sermeden.domain.Patient;
 public interface OdontogramaService {
 	
 	List<Diente> findByDniPaciente(String dniPaciente);
+
+	Diente save(Diente diente);
 }

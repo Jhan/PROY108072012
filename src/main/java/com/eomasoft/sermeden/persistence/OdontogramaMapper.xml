@@ -15,4 +15,10 @@
 		    ON EST.ID = D.IDESTOM
 		WHERE PS.DNI = #{param1};
 	</select>
+	
+	<insert id="insert" parameterType="Patient" useGeneratedKeys="true" keyColumn="ID" keyProperty="id">
+	</insert>
+	
+	<update id="update" parameterType="Patient">
+	</update>
 </mapper>

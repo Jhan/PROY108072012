@@ -13,5 +13,8 @@ import com.eomasoft.sermeden.domain.Patient;
 public interface OdontogramaMapper {
 
 	List<Diente> findByDniPaciente(String dniPaciente);
+
+	void insert(Diente diente);
+	void update(Diente diente);
 	
 }

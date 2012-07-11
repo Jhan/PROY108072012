@@ -5,37 +5,37 @@
 			"id": "1",
 			"nombre": "Caries",
 			"src_img": "img/odontograma/hcaries.png",
-			"modo_uso": "sec"
+			"modo_uso": 2
 		},
 		{
 			"id": "2",
 			"nombre": "Corona Temporal",
 			"src_img": "img/odontograma/hcoronatemp.png",
-			"modo_uso": "cor"
+			"modo_uso": 0
 		},
 		{
 			"id": "3",
 			"nombre": "Corona Completa",
 			"src_img": "img/odontograma/hcoronacomp.png",
-			"modo_uso": "cor"
+			"modo_uso": 0
 		},
 		{
 			"id": "4",
 			"nombre": "Diente Asuente",
 			"src_img": "img/odontograma/ausente.png",
-			"modo_uso": "ausente"
+			"modo_uso": 0
 		},
 		{
 			"id": "5",
 			"nombre": "Diastema",
 			"src_img": "img/odontograma/diastema.png",
-			"modo_uso": "par"
+			"modo_uso": 1
 		},
 		{
 			"id": "6",
 			"nombre": "Reestauracion",
 			"src_img": "img/odontograma/reestauracion.png",
-			"modo_uso": "rest"
+			"modo_uso": 2
 		}																					
 	]
 }
