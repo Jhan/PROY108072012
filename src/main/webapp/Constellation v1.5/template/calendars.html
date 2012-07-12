@@ -1,0 +1,1044 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Constellation Admin Skin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- Combined stylesheets load -->
+	<!-- Load either 960.gs.fluid or 960.gs to toggle between fixed and fluid layout -->
+	<link href="css/mini3537.css?files=reset,common,form,standard,960.gs.fluid,simple-lists,block-lists,planning,table,calendars,wizard,gallery" rel="stylesheet" type="text/css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon-large.png">
+	
+	<!-- Modernizr for support detection, all javascript libs are moved right above </body> for better performance -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	<!--
+	
+	This file is from the demo website of the Constellation Admin Skin
+	
+	If you like it and wish to use it, please consider buying it on ThemeForest:
+	http://themeforest.net/item/constellation-complete-admin-skin/116461
+	
+	Thanks!
+	
+	-->
+	
+</head>
+
+<body>
+<!-- The template uses conditional comments to add wrappers div for ie8 and ie7 - just add .ie or .ie7 prefix to your css selectors when needed -->
+<!--[if lt IE 9]><div class="ie"><![endif]-->
+<!--[if lt IE 8]><div class="ie7"><![endif]-->
+	
+	<!-- Header -->
+	
+	<!-- Server status -->
+	<header><div class="container_12">
+		
+		<p id="skin-name"><small>Constellation<br> Admin Skin</small> <strong>1.5</strong></p>
+		<div class="server-info">Server: <strong>Apache (unknown)</strong></div>
+		<div class="server-info">Php: <strong>5.2.17</strong></div>
+		
+	</div></header>
+	<!-- End server status -->
+
+	<!-- Main nav -->
+	<nav id="main-nav">
+		
+		<ul class="container_12">
+			<li class="home current"><a href="javascript:void(0)" title="Home">Home</a>
+				<ul>
+					<li class="current"><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+					<li><a href="javascript:void(0)" title="My profile">My profile</a></li>
+					<li class="with-menu"><a href="javascript:void(0)" title="My settings">My settings</a>
+						<div class="menu">
+							<img src="images/menu-open-arrow.png" width="16" height="16">
+							<ul>
+								<li class="icon_address"><a href="javascript:void(0)">Browse by</a>
+									<ul>
+										<li class="icon_blog"><a href="javascript:void(0)">Blog</a>
+											<ul>
+												<li class="icon_alarm"><a href="javascript:void(0)">Recents</a>
+													<ul>
+														<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+														<li class="icon_newspaper"><a href="javascript:void(0)">Press blog</a></li>
+													</ul>
+												</li>
+												<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+												<li class="icon_computer"><a href="javascript:void(0)">Support blog</a></li>
+												<li class="icon_search"><a href="javascript:void(0)">Search...</a></li>
+											</ul>
+										</li>
+										<li class="icon_server"><a href="javascript:void(0)">Website</a></li>
+										<li class="icon_network"><a href="javascript:void(0)">Domain</a></li>
+									</ul>
+								</li>
+								<li class="icon_export"><a href="javascript:void(0)">Export</a>
+									<ul>
+										<li class="icon_doc_excel"><a href="javascript:void(0)">Excel</a></li>
+										<li class="icon_doc_csv"><a href="javascript:void(0)">CSV</a></li>
+										<li class="icon_doc_pdf"><a href="javascript:void(0)">PDF</a></li>
+										<li class="icon_doc_image"><a href="javascript:void(0)">Image</a></li>
+										<li class="icon_doc_web"><a href="javascript:void(0)">Html</a></li>
+									</ul>
+								</li>
+								<li class="sep"></li>
+								<li class="icon_refresh"><a href="javascript:void(0)">Reload</a></li>
+								<li class="icon_reset">Reset</li>
+								<li class="icon_search"><a href="javascript:void(0)">Search</a></li>
+								<li class="sep"></li>
+								<li class="icon_terminal"><a href="javascript:void(0)">Custom request</a></li>
+								<li class="icon_battery"><a href="javascript:void(0)">Stats server load</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="write"><a href="javascript:void(0)" title="Write">Write</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Articles">Articles</a></li>
+					<li><a href="javascript:void(0)" title="Add article">Add article</a></li>
+					<li><a href="javascript:void(0)" title="Posts">Posts</a></li>
+					<li><a href="javascript:void(0)" title="Add post">Add post</a></li>
+				</ul>
+			</li>
+			<li class="comments"><a href="javascript:void(0)" title="Comments">Comments</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Spams">Spams</a></li>
+				</ul>
+			</li>
+			<li class="medias"><a href="javascript:void(0)" title="Medias">Medias</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">Browse</a></li>
+					<li><a href="javascript:void(0)" title="Add file">Add file</a></li>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="users"><a href="javascript:void(0)" title="Users">Users</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">List</a></li>
+					<li><a href="javascript:void(0)" title="Add user">Add user</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="stats"><a href="javascript:void(0)" title="Stats">Stats</a></li>
+			<li class="settings"><a href="javascript:void(0)" title="Settings">Settings</a></li>
+			<li class="backup"><a href="javascript:void(0)" title="Backup">Backup</a></li>
+		</ul>
+	</nav>
+	<!-- End main nav -->
+	
+	<!-- Sub nav -->
+	<div id="sub-nav"><div class="container_12">
+		
+		<a href="javascript:void(0)" title="Help" class="nav-button"><b>Help</b></a>
+	
+		<form id="search-form" name="search-form" method="post" action="http://www.display-inline.fr/demo/constellation/template/search.php">
+			<input type="text" name="s" id="s" value="" title="Search admin..." autocomplete="off">
+		</form>
+	
+	</div></div>
+	<!-- End sub nav -->
+	
+	<!-- Status bar -->
+	<div id="status-bar"><div class="container_12">
+	
+		<ul id="status-infos">
+			<li class="spaced">Logged as: <strong>Admin</strong></li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="5 messages"><img src="images/icons/fugue/mail.png" width="16" height="16"> <strong>5</strong></a>
+				<div id="messages-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-mail">
+						<li>
+							<a href="javascript:void(0)"><strong>10:15</strong> Please update...<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> Hi<br>
+							<small>From: Jane</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> System update<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Database backup<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Re: bug report<br>
+							<small>From: Max</small></a>
+						</li>
+					</ul>
+					
+					<p id="messages-info" class="result-info"><a href="javascript:void(0)">Go to inbox &raquo;</a></p>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="25 comments"><img src="images/icons/fugue/balloon.png" width="16" height="16"> <strong>25</strong></a>
+				<div id="comments-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-comment">
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: I don't think so<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ken_54</strong>: What about using a different...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong> Sure, but no more.<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Have you seen that...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Good luck!<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Sébastien</strong>: This sure rocks!<br>
+							<small>On <strong>Another post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: Me too!<br>
+							<small>On <strong>Third post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong> This can be solved by...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: No prob.<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: I had the following...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Yes<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lian</strong>: Please make sure that...<br>
+							<small>On <strong>Last post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ann</strong> Thanks!<br>
+							<small>On <strong>Last post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Don't tell me what...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Gordon</strong>: Here is an article about...<br>
+							<small>On <strong>My another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Try to reset the value first<br>
+							<small>On <strong>Last title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Sure!<br>
+							<small>On <strong>Second post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Many</strong> Great job, keep on!<br>
+							<small>On <strong>Third post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I really like this<br>
+							<small>On <strong>First title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Paul</strong>: Hello, I have an issue with...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>June</strong>: Yuck.<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: Wow, sounds amazing, do...<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Esther</strong>: Man, this is the best...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Thanks!<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I'd say it is not safe...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+					</ul>
+					
+					<p id="comments-info" class="result-info"><a href="javascript:void(0)">Manage comments &raquo;</a></p>
+				</div>
+			</li>
+			<li><a href="login.html" class="button red" title="Logout"><span class="smaller">LOGOUT</span></a></li>
+		</ul>
+		
+		<ul id="breadcrumb">
+			<li><a href="javascript:void(0)" title="Home">Home</a></li>
+			<li><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+		</ul>
+	
+	</div></div>
+	<!-- End status bar -->
+	
+	<div id="header-shadow"></div>
+	<!-- End header -->
+	
+	<!-- Always visible control bar -->
+	<div id="control-bar" class="grey-bg clearfix"><div class="container_12">
+	
+		<div class="float-left">
+			<button type="button" onClick="document.location.href = '../index.html#pages';"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Back to demo website</button>
+		</div>
+			
+	</div></div>
+	<!-- End control bar -->
+	
+	<!-- Content -->
+	<article class="container_12">
+		
+		<section class="grid_12">
+			<div class="block-border"><div class="block-content">
+				<h1>Large calendar</h1>
+				
+				<div class="block-controls">
+					<ul class="controls-buttons">
+						<li><a href="javascript:void(0)" title="Previous month"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"></a></li>
+						<li class="sep"></li>
+						<li class="controls-block"><strong>June 2010</strong></li>
+						<li class="sep"></li>
+						<li><a href="javascript:void(0)" title="Next month"><img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
+					</ul>
+				</div>
+				
+				<div class="no-margin">
+					<table cellspacing="0" class="calendar">
+						<thead>
+							<tr>
+								<th scope="col" class="black-cell"><span class="success"></span></th>
+								<th scope="col" class="week-end">Sunday</th>
+								<th scope="col">Monday</th>
+								<th scope="col">Tuesday</th>
+								<th scope="col">Wednesday</th>
+								<th scope="col">Thursday</th>
+								<th scope="col">Friday</th>
+								<th scope="col" class="week-end">Saturday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">13</th>
+								<td class="week-end other-month">
+									<span class="day">28</span>
+								</td>
+								<td class="other-month">
+									<span class="day">29</span>
+								</td>
+								<td class="other-month">
+									<span class="day">30</span>
+								</td>
+								<td class="other-month">
+									<span class="day">31</span>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">1</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">2</a>
+									<ul class="dot-events with-children-tip">
+										<li><a href="javascript:void(0)">Lena's birthday</a></li>
+										<li><a href="javascript:void(0)">Replace server hard drive</a></li>
+										<li><a href="javascript:void(0)">Max's birthday</a></li>
+									</ul>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">3</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">14</th>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">4</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">5</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>9:00</b> Meeting</a></li>
+										<li><a href="javascript:void(0)"><b>11:00</b> Meeting with D.H.</a></li>
+									</ul>
+									<div class="more-events">
+										3 more events
+										<ul>
+											<li><a href="javascript:void(0)"><b>14:00</b> Meeting</a></li>
+											<li><a href="javascript:void(0)"><b>17:00</b> Soccer</a></li>
+											<li><a href="javascript:void(0)"><b>21:00</b> Diner with Jane</a></li>
+										</ul>
+									</div>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">6</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">7</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>9:00</b> Meeting</a></li>
+									</ul>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">8</a>
+									<ul class="dot-events with-children-tip">
+										<li class="red">Tax payment limit date</li>
+										<li><a href="javascript:void(0)">Check server hard drive logs</a></li>
+									</ul>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day today">9</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">10</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">15</th>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">11</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">12</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">13</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">14</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+									<ul class="events">
+										<li class="red"><b>17:00</b> Meeting</li>
+									</ul>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">15</a>
+									<ul class="dot-events with-children-tip">
+										<li class="red">John's birthday</li>
+									</ul>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>17:00</b> Soccer</a></li>
+									</ul>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">16</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">17</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">16</th>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">18</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">19</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">20</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">21</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>8:00</b> Meeting</a></li>
+									</ul>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">22</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>17:00</b> Soccer</a></li>
+									</ul>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">23</a>
+									<ul class="dot-events with-children-tip">
+										<li><a href="javascript:void(0)">Check server hard drive logs</a></li>
+									</ul>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">24</a>
+									<ul class="dot-events with-children-tip">
+										<li><a href="javascript:void(0)">Send final report</a></li>
+									</ul>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">17</th>
+								<td class="week-end">
+									<a href="javascript:void(0)" class="day">25</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td class="unavailable">
+									<span class="day">26</span>
+								</td>
+								<td class="unavailable">
+									<span class="day">27</span>
+								</td>
+								<td class="unavailable">
+									<span class="day">28</span>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">29</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td>
+									<a href="javascript:void(0)" class="day">30</a>
+									<a href="javascript:void(0)" class="add-event">Add</a>
+								</td>
+								<td class="week-end other-month">
+									<span class="day">1</span>
+									<ul class="dot-events with-children-tip">
+										<li>Tom's birthday</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+				<ul class="message no-margin">
+					<li>18 events found</li>
+				</ul>
+			
+			</div></div>
+		</section>
+		
+		<section class="grid_6">
+			<div class="block-border"><div class="block-content">
+				<h1>Tiny and medium calendars</h1>
+				
+				<div class="fieldset with-legend grey-bg clearfix">
+					<div class="legend">Tiny calendar</div>
+					
+					<div class="mini-calendar float-right">
+						<div class="calendar-controls">
+							<a href="javascript:void(0)" class="calendar-prev" title="Previous month"><img src="images/cal-arrow-left.png" width="16" height="16"></a>
+							<a href="javascript:void(0)" class="calendar-next" title="Next month"><img src="images/cal-arrow-right.png" width="16" height="16"></a>
+							Apr 2010
+						</div>
+						
+						<table cellspacing="0">
+							<thead>
+								<tr>
+									<th scope="col" class="week-end">S</th>
+									<th scope="col">M</th>
+									<th scope="col">T</th>
+									<th scope="col">W</th>
+									<th scope="col">T</th>
+									<th scope="col">F</th>
+									<th scope="col" class="week-end">S</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="week-end other-month">28</td>
+									<td class="other-month">29</td>
+									<td class="other-month">30</td>
+									<td class="other-month">31</td>
+									<td><a href="javascript:void(0)">1</a></td>
+									<td><a href="javascript:void(0)">2</a></td>
+									<td class="week-end"><a href="javascript:void(0)">3</a></td>
+								</tr>
+								<tr>
+									<td class="week-end"><a href="javascript:void(0)">4</a></td>
+									<td><a href="javascript:void(0)">5</a></td>
+									<td><a href="javascript:void(0)">6</a></td>
+									<td><a href="javascript:void(0)">7</a></td>
+									<td><a href="javascript:void(0)">8</a></td>
+									<td class="today"><a href="javascript:void(0)">9</a></td>
+									<td class="week-end"><a href="javascript:void(0)">10</a></td>
+								</tr>
+								<tr>
+									<td class="week-end"><a href="javascript:void(0)">11</a></td>
+									<td><a href="javascript:void(0)">12</a></td>
+									<td><a href="javascript:void(0)">13</a></td>
+									<td><a href="javascript:void(0)">14</a></td>
+									<td><a href="javascript:void(0)">15</a></td>
+									<td><a href="javascript:void(0)">16</a></td>
+									<td class="week-end"><a href="javascript:void(0)">17</a></td>
+								</tr>
+								<tr>
+									<td class="week-end"><a href="javascript:void(0)">18</a></td>
+									<td><a href="javascript:void(0)">19</a></td>
+									<td><a href="javascript:void(0)">20</a></td>
+									<td><a href="javascript:void(0)">21</a></td>
+									<td><a href="javascript:void(0)">22</a></td>
+									<td><a href="javascript:void(0)">23</a></td>
+									<td class="week-end"><a href="javascript:void(0)">24</a></td>
+								</tr>
+								<tr>
+									<td class="week-end"><a href="javascript:void(0)">25</a></td>
+									<td class="unavailable">26</td>
+									<td class="unavailable">27</td>
+									<td class="unavailable">28</td>
+									<td><a href="javascript:void(0)">29</a></td>
+									<td><a href="javascript:void(0)">30</a></td>
+									<td class="week-end other-month">1</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<p class="next-to-mini-calendar">Small calendar ideal for quick date selection</p>
+					
+				</div>
+				
+				<hr class="no-margin">
+				
+				<div class="box"><p class="mini-infos">
+					<strong>Medium calendar</strong>
+				</p></div>
+				
+				<div class="medium-calendar">
+					<div class="calendar-controls">
+						<a href="javascript:void(0)" class="calendar-prev" title="Previous month"><img src="images/cal-arrow-left.png" width="16" height="16"></a>
+						<a href="javascript:void(0)" class="calendar-next" title="Next month"><img src="images/cal-arrow-right.png" width="16" height="16"></a>
+						Apr 2010
+					</div>
+					
+					<table cellspacing="0">
+						<thead>
+							<tr>
+								<th scope="col" class="week-end">Sun</th>
+								<th scope="col">Mon</th>
+								<th scope="col">Tue</th>
+								<th scope="col">Wed</th>
+								<th scope="col">Thu</th>
+								<th scope="col">Fri</th>
+								<th scope="col" class="week-end">Sat</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="week-end other-month">28</td>
+								<td class="other-month">29</td>
+								<td class="other-month">30</td>
+								<td class="other-month">31</td>
+								<td><a href="javascript:void(0)">1</a></td>
+								<td><a href="javascript:void(0)"><span class="blue-corner">2</span></a></td>
+								<td class="week-end"><a href="javascript:void(0)">3</a></td>
+							</tr>
+							<tr>
+								<td class="week-end"><a href="javascript:void(0)">4</a></td>
+								<td><a href="javascript:void(0)">5<span class="nb-events">54</span></a></td>
+								<td><a href="javascript:void(0)">6</a></td>
+								<td><a href="javascript:void(0)">7<span class="nb-events">1</span></a></td>
+								<td><a href="javascript:void(0)"><span class="red-corner"><span class="blue-corner">8</span></span></a></td>
+								<td><a href="javascript:void(0)"><span class="today">9</span></a></td>
+								<td class="week-end"><a href="javascript:void(0)">10</a></td>
+							</tr>
+							<tr>
+								<td class="week-end"><a href="javascript:void(0)">11</a></td>
+								<td><a href="javascript:void(0)">12</a></td>
+								<td><a href="javascript:void(0)">13</a></td>
+								<td><a href="javascript:void(0)">14<span class="nb-events">1</span></a></td>
+								<td><a href="javascript:void(0)"><span class="red-corner">15</span><span class="nb-events">1</span></a></td>
+								<td><a href="javascript:void(0)">16</a></td>
+								<td class="week-end"><a href="javascript:void(0)">17</a></td>
+							</tr>
+							<tr>
+								<td class="week-end"><a href="javascript:void(0)">18</a></td>
+								<td><a href="javascript:void(0)">19</a></td>
+								<td><a href="javascript:void(0)">20<span class="nb-events">1</span></a></td>
+								<td><a href="javascript:void(0)">21</a></td>
+								<td><a href="javascript:void(0)">22<span class="nb-events">1</span></a></td>
+								<td><a href="javascript:void(0)"><span class="blue-corner">23</span></a></td>
+								<td class="week-end"><a href="javascript:void(0)"><span class="blue-corner">24</span></a></td>
+							</tr>
+							<tr>
+								<td class="week-end"><a href="javascript:void(0)">25</a></td>
+								<td class="unavailable">26</td>
+								<td class="unavailable">27</td>
+								<td class="unavailable">28</td>
+								<td><a href="javascript:void(0)">29</a></td>
+								<td><a href="javascript:void(0)">30</a></td>
+								<td class="week-end other-month"><div><span class="blue-corner">1</span><span class="nb-events">2</span></div></td> <!-- div required to position elements -->
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+			</div></div>
+		</section>
+		
+		<section class="grid_6">
+			<div class="block-border"><div class="block-content">
+				<h1>List calendar</h1>
+				
+				<div class="block-controls">
+					<ul class="controls-buttons">
+						<li>
+							<label for="show-empty">Show empty days</label>
+							<input type="checkbox" name="show-empty" id="show-empty" value="1" class="mini-switch" checked="checked">
+						</li>
+					</ul>
+				</div>
+				
+				<ul class="message no-margin">
+					<li>12 events found</li>
+				</ul>
+				
+				<div class="no-margin">
+					<table cellspacing="0" class="list-calendar">
+						<tbody>
+							<tr class="empty">
+								<th scope="row">01</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									No events
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">02</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									<ul class="events-dots-list">
+										<li><a href="javascript:void(0)"><span></span> Lena's birthday</a></li>
+										<li><a href="javascript:void(0)"><span></span> Replace server hard drive</a></li>
+										<li><a href="javascript:void(0)"><span></span> Max's birthday</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="empty">
+								<th scope="row">03</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									No events
+								</td>
+							</tr>
+							<tr class="empty">
+								<th scope="row">04</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									No events
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">05</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>9:00</b> Meeting</a></li>
+										<li><a href="javascript:void(0)"><b>11:00</b> Meeting with D.H.</a></li>
+										<li><a href="javascript:void(0)"><b>14:00</b> Meeting</a></li>
+									</ul>
+									<div class="more-events">
+										2 more events
+										<ul>
+											<li><a href="javascript:void(0)"><b>17:00</b> Soccer</a></li>
+											<li><a href="javascript:void(0)"><b>21:00</b> Diner with Jane</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							<tr class="empty">
+								<th scope="row">06</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									No events
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">07</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									<ul class="events">
+										<li><a href="javascript:void(0)"><b>9:00</b> Meeting</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">08</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									<ul class="events-dots-list">
+										<li class="red"><span></span> Tax payment limit date</li>
+										<li><a href="javascript:void(0)"><span></span> Check server hard drive logs</a></li>
+									</ul>
+								</td>
+							</tr>
+							<tr class="empty">
+								<th scope="row">09</th>
+								<td>
+									<ul class="mini-menu">
+										<li><a href="javascript:void(0)" title="Add event"><img src="images/icons/add.png" width="16" height="16"> Add event</a></li>
+									</ul>
+									No events
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			
+			</div></div>
+		</section>
+		
+		<div class="clear"></div>
+		
+		<section class="grid_12">
+			<div class="block-border"><div class="block-content">
+				<h1>Week calendar</h1>
+				
+				<div class="block-controls">
+					<ul class="controls-buttons">
+						<li><a href="javascript:void(0)" title="Previous week"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"></a></li>
+						<li class="sep"></li>
+						<li class="controls-block">Week 27</li>
+						<li class="sep"></li>
+						<li><a href="javascript:void(0)" title="Next week"><img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
+					</ul>
+				</div>
+				
+				<ul class="week-calendar no-margin">
+					<li class="week-cal-hours">
+						<div><span class="day">&nbsp;</span></div>
+						<ul>
+							<li><span>08:00</span></li>
+							<li><span>09:00</span></li>
+							<li><span>10:00</span></li>
+							<li><span>11:00</span></li>
+							<li><span>12:00</span></li>
+							<li><span>01:00</span></li>
+							<li><span>02:00</span></li>
+							<li><span>03:00</span></li>
+							<li><span>04:00</span></li>
+							<li><span>05:00</span></li>
+							<li><span>06:00</span></li>
+							<li><span>07:00</span></li>
+							<li><span>08:00</span></li>
+						</ul>
+					</li>
+					
+					<li class="day1 weekend">
+						<div class="day">Sunday</div>
+						<ul>
+							<li class="lunch from-12 to-14"></li>
+						</ul>
+					</li>
+					
+					<li class="day2">
+						<div class="day">
+							<ul class="dot-events with-children-tip">
+								<li class="red">Tax payment limit date</li>
+								<li><a href="javascript:void(0)">Check server hard drive logs</a></li>
+							</ul>
+							Monday
+						</div>
+						<ul>
+							<li class="lunch from-12 to-14"></li>
+							<li class="from-10-15 to-11-45">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">10:15 - 11:45</span>
+								Event description
+							</li>
+							<li class="from-14 to-17 purple">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">14:00 - 17:00</span>
+								Event description
+							</li>
+						</ul>
+					</li>
+					
+					<li class="day3">
+						<div class="day">Tuesday</div>
+						<ul>
+							<li class="lunch from-12 to-14"></li>
+							<li class="from-9 to-11-30 half-left">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">09:00 - 11:30</span>
+								Event description
+							</li>
+							<li class="from-10-30 to-12 half-right blue">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">10:30 - 12:00</span>
+								Event description
+							</li>
+							<li class="from-16 to-17-30 orange">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">16:00 - 17:30</span>
+								Event description
+							</li>
+						</ul>
+					</li>
+					
+					<li class="day4">
+						<div class="day">Wednesday</div>
+						<ul>
+							<li class="unavailable"></li>
+						</ul>
+					</li>
+					
+					<li class="day5">
+						<div class="day">Thursday</div>
+						<ul>
+							<li class="unavailable from-9 to-11"></li>
+							<li class="lunch from-12 to-14"></li>
+							<li class="from-14-15 to-17-45 green">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">14:15 - 17:45</span>
+								Event description
+							</li>
+						</ul>
+					</li>
+					
+					<li class="day6">
+						<div class="day">Friday</div>
+						<ul>
+							<li class="lunch from-12 to-14"></li>
+							<li class="from-10-15 to-11-45">
+								<ul class="mini-menu">
+									<li><a href="javascript:void(0)" title="Edit"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+									<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								</ul>
+								<span class="event-time">10:15 - 11:45</span>
+								Event description
+							</li>
+						</ul>
+					</li>
+					
+					<li class="day7 weekend">
+						<div class="day">Saturday</div>
+						<ul>
+							<li class="lunch from-12 to-14"></li>
+						</ul>
+					</li>
+					
+				</ul>
+			</div></div>
+		</section>
+		
+	</article>
+	
+	<!-- End content -->
+	
+	<footer>
+		
+		<div class="float-right">
+			<a href="#top" class="button"><img src="images/icons/fugue/navigation-090.png" width="16" height="16"> Page top</a>
+		</div>
+		
+	</footer>
+	
+	<!-- Combined JS load -->
+	<script src="js/mini5c1b.php?files=libs/jquery-1.6.3.min,old-browsers,jquery.accessibleList,searchField,common,standard,jquery.tip,libs/jquery.hashchange,jquery.contextMenu,list"></script>
+	<!--[if lte IE 8]><script src="js/standard.ie.js"></script><![endif]-->
+	
+	<script>
+	
+		// Search tip
+		$(document).ready(function()
+		{
+			$('#s').tip({
+				content: 'AJAX search! Try entering "add"',
+				onHover: false
+			});
+		});
+	
+	</script>
+	
+	<script>
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10643639-3']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</body>
+</html>

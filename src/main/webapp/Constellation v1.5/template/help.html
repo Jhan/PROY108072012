@@ -1,0 +1,474 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Constellation Admin Skin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- Combined stylesheets load -->
+	<!-- Load either 960.gs.fluid or 960.gs to toggle between fixed and fluid layout -->
+	<link href="css/mini3537.css?files=reset,common,form,standard,960.gs.fluid,simple-lists,block-lists,planning,table,calendars,wizard,gallery" rel="stylesheet" type="text/css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon-large.png">
+	
+	<!-- Modernizr for support detection, all javascript libs are moved right above </body> for better performance -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	<!--
+	
+	This file is from the demo website of the Constellation Admin Skin
+	
+	If you like it and wish to use it, please consider buying it on ThemeForest:
+	http://themeforest.net/item/constellation-complete-admin-skin/116461
+	
+	Thanks!
+	
+	-->
+	
+</head>
+
+<body>
+<!-- The template uses conditional comments to add wrappers div for ie8 and ie7 - just add .ie or .ie7 prefix to your css selectors when needed -->
+<!--[if lt IE 9]><div class="ie"><![endif]-->
+<!--[if lt IE 8]><div class="ie7"><![endif]-->
+	
+	<!-- Header -->
+	
+	<!-- Server status -->
+	<header><div class="container_12">
+		
+		<p id="skin-name"><small>Constellation<br> Admin Skin</small> <strong>1.5</strong></p>
+		<div class="server-info">Server: <strong>Apache (unknown)</strong></div>
+		<div class="server-info">Php: <strong>5.2.17</strong></div>
+		
+	</div></header>
+	<!-- End server status -->
+
+	<!-- Main nav -->
+	<nav id="main-nav">
+		
+		<ul class="container_12">
+			<li class="home current"><a href="javascript:void(0)" title="Home">Home</a>
+				<ul>
+					<li class="current"><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+					<li><a href="javascript:void(0)" title="My profile">My profile</a></li>
+					<li class="with-menu"><a href="javascript:void(0)" title="My settings">My settings</a>
+						<div class="menu">
+							<img src="images/menu-open-arrow.png" width="16" height="16">
+							<ul>
+								<li class="icon_address"><a href="javascript:void(0)">Browse by</a>
+									<ul>
+										<li class="icon_blog"><a href="javascript:void(0)">Blog</a>
+											<ul>
+												<li class="icon_alarm"><a href="javascript:void(0)">Recents</a>
+													<ul>
+														<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+														<li class="icon_newspaper"><a href="javascript:void(0)">Press blog</a></li>
+													</ul>
+												</li>
+												<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+												<li class="icon_computer"><a href="javascript:void(0)">Support blog</a></li>
+												<li class="icon_search"><a href="javascript:void(0)">Search...</a></li>
+											</ul>
+										</li>
+										<li class="icon_server"><a href="javascript:void(0)">Website</a></li>
+										<li class="icon_network"><a href="javascript:void(0)">Domain</a></li>
+									</ul>
+								</li>
+								<li class="icon_export"><a href="javascript:void(0)">Export</a>
+									<ul>
+										<li class="icon_doc_excel"><a href="javascript:void(0)">Excel</a></li>
+										<li class="icon_doc_csv"><a href="javascript:void(0)">CSV</a></li>
+										<li class="icon_doc_pdf"><a href="javascript:void(0)">PDF</a></li>
+										<li class="icon_doc_image"><a href="javascript:void(0)">Image</a></li>
+										<li class="icon_doc_web"><a href="javascript:void(0)">Html</a></li>
+									</ul>
+								</li>
+								<li class="sep"></li>
+								<li class="icon_refresh"><a href="javascript:void(0)">Reload</a></li>
+								<li class="icon_reset">Reset</li>
+								<li class="icon_search"><a href="javascript:void(0)">Search</a></li>
+								<li class="sep"></li>
+								<li class="icon_terminal"><a href="javascript:void(0)">Custom request</a></li>
+								<li class="icon_battery"><a href="javascript:void(0)">Stats server load</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="write"><a href="javascript:void(0)" title="Write">Write</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Articles">Articles</a></li>
+					<li><a href="javascript:void(0)" title="Add article">Add article</a></li>
+					<li><a href="javascript:void(0)" title="Posts">Posts</a></li>
+					<li><a href="javascript:void(0)" title="Add post">Add post</a></li>
+				</ul>
+			</li>
+			<li class="comments"><a href="javascript:void(0)" title="Comments">Comments</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Spams">Spams</a></li>
+				</ul>
+			</li>
+			<li class="medias"><a href="javascript:void(0)" title="Medias">Medias</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">Browse</a></li>
+					<li><a href="javascript:void(0)" title="Add file">Add file</a></li>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="users"><a href="javascript:void(0)" title="Users">Users</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">List</a></li>
+					<li><a href="javascript:void(0)" title="Add user">Add user</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="stats"><a href="javascript:void(0)" title="Stats">Stats</a></li>
+			<li class="settings"><a href="javascript:void(0)" title="Settings">Settings</a></li>
+			<li class="backup"><a href="javascript:void(0)" title="Backup">Backup</a></li>
+		</ul>
+	</nav>
+	<!-- End main nav -->
+	
+	<!-- Sub nav -->
+	<div id="sub-nav"><div class="container_12">
+		
+		<a href="javascript:void(0)" title="Help" class="nav-button"><b>Help</b></a>
+	
+		<form id="search-form" name="search-form" method="post" action="http://www.display-inline.fr/demo/constellation/template/search.php">
+			<input type="text" name="s" id="s" value="" title="Search admin..." autocomplete="off">
+		</form>
+	
+	</div></div>
+	<!-- End sub nav -->
+	
+	<!-- Status bar -->
+	<div id="status-bar"><div class="container_12">
+	
+		<ul id="status-infos">
+			<li class="spaced">Logged as: <strong>Admin</strong></li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="5 messages"><img src="images/icons/fugue/mail.png" width="16" height="16"> <strong>5</strong></a>
+				<div id="messages-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-mail">
+						<li>
+							<a href="javascript:void(0)"><strong>10:15</strong> Please update...<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> Hi<br>
+							<small>From: Jane</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> System update<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Database backup<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Re: bug report<br>
+							<small>From: Max</small></a>
+						</li>
+					</ul>
+					
+					<p id="messages-info" class="result-info"><a href="javascript:void(0)">Go to inbox &raquo;</a></p>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="25 comments"><img src="images/icons/fugue/balloon.png" width="16" height="16"> <strong>25</strong></a>
+				<div id="comments-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-comment">
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: I don't think so<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ken_54</strong>: What about using a different...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong> Sure, but no more.<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Have you seen that...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Good luck!<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Sébastien</strong>: This sure rocks!<br>
+							<small>On <strong>Another post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: Me too!<br>
+							<small>On <strong>Third post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong> This can be solved by...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: No prob.<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: I had the following...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Yes<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lian</strong>: Please make sure that...<br>
+							<small>On <strong>Last post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ann</strong> Thanks!<br>
+							<small>On <strong>Last post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Don't tell me what...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Gordon</strong>: Here is an article about...<br>
+							<small>On <strong>My another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Try to reset the value first<br>
+							<small>On <strong>Last title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Sure!<br>
+							<small>On <strong>Second post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Many</strong> Great job, keep on!<br>
+							<small>On <strong>Third post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I really like this<br>
+							<small>On <strong>First title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Paul</strong>: Hello, I have an issue with...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>June</strong>: Yuck.<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: Wow, sounds amazing, do...<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Esther</strong>: Man, this is the best...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Thanks!<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I'd say it is not safe...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+					</ul>
+					
+					<p id="comments-info" class="result-info"><a href="javascript:void(0)">Manage comments &raquo;</a></p>
+				</div>
+			</li>
+			<li><a href="login.html" class="button red" title="Logout"><span class="smaller">LOGOUT</span></a></li>
+		</ul>
+		
+		<ul id="breadcrumb">
+			<li><a href="javascript:void(0)" title="Home">Home</a></li>
+			<li><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+		</ul>
+	
+	</div></div>
+	<!-- End status bar -->
+	
+	<div id="header-shadow"></div>
+	<!-- End header -->
+	
+	<!-- Always visible control bar -->
+	<div id="control-bar" class="grey-bg clearfix"><div class="container_12">
+	
+		<div class="float-left">
+			<button type="button" onClick="document.location.href = '../index.html#pages';"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Back to demo website</button>
+		</div>
+			
+	</div></div>
+	<!-- End control bar -->
+	
+	<!-- Content -->
+	<article class="container_12">
+		
+		<div class="grid_4">
+			
+			<section class="with-margin">
+				<div class="block-border">
+					<form class="block-content form" id="simple-list-form" method="post" action="#">
+						<h1>Simple list</h1>
+						
+						<p class="input-type-text">
+							<input type="text" name="simple-search" id="simple-search" value="" style="width:90%" title="Filter results">
+							<img src="images/icons/fugue/magnifier.png" width="16" height="16" class="float-right">
+						</p>
+						
+						<ul class="simple-list with-icon icon-info">
+							<li><a href="javascript:void(0)">Lorem ipsum</a></li>
+							<li><a href="javascript:void(0)">Lorem ipsum</a></li>
+							<li><a href="javascript:void(0)">Lorem ipsum</a></li>
+							<li><a href="javascript:void(0)">Lorem ipsum</a></li>
+							<li><a href="javascript:void(0)">Lorem ipsum</a></li>
+						</ul>
+					
+					</form>
+					
+					<div class="block-content no-title dark-bg">
+						<p class="mini-infos">
+							Not found? Try <a href="javascript:void(0)">advanced search &raquo;</a>
+						</p>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<div class="block-border"><div class="block-content no-title">
+					
+					<ul class="simple-list with-icon">
+						<li class="icon-date"><span>Lorem ipsum</span></li>
+						<li class="icon-file"><span>Lorem ipsum</span></li>
+						<li class="icon-tags"><span>Lorem ipsum</span></li>
+						<li class="icon-group"><span>Lorem ipsum</span></li>
+					</ul>
+					
+				</div></div>
+			</section>
+			
+		</div>
+		
+		<section class="grid_8">
+			<div class="block-border"><div class="block-content">
+				<h1>Help</h1>
+				
+				<div class="block-controls">
+					<ul class="controls-buttons">
+						<li><a href="javascript:void(0)" title="Previous page"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"></a></li>
+						<li class="sep"></li>
+						<li><a href="javascript:void(0)"><strong>Topics list</strong></a></li>
+						<li class="sep"></li>
+						<li><a href="javascript:void(0)" title="Next page"><img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
+					</ul>
+				</div>
+				
+				<div class="infos">
+					<small>Help > CSS</small>
+					<h2 class="bigger">Create a new block</h2>
+				</div>
+				
+				<p class="grey">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				
+				<p><strong>Follow these steps:</strong></p>
+				
+				<dl class="accordion">
+					<dt><span class="number">1</span> Insert a block div</dt>
+					<dd>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</dd>
+					
+					<dt><span class="number">2</span> Add title</dt>
+					<dd>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</dd>
+					
+					<dt><span class="number">3</span> Add navigation or pagination</dt>
+					<dd>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</dd>
+					
+					<dt><span class="number">4</span> Insert elements</dt>
+					<dd>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</dd>
+					
+					<dt><span class="number">5</span> Adding/removing block paddings</dt>
+					<dd>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</dd>
+				</dl>
+			
+			</div></div>
+		</section>
+		
+	</article>
+	
+	<!-- End content -->
+	
+	<footer>
+		
+		<div class="float-right">
+			<a href="#top" class="button"><img src="images/icons/fugue/navigation-090.png" width="16" height="16"> Page top</a>
+		</div>
+		
+	</footer>
+	
+	<!-- Combined JS load -->
+	<script src="js/mini5c1b.php?files=libs/jquery-1.6.3.min,old-browsers,jquery.accessibleList,searchField,common,standard,jquery.tip,libs/jquery.hashchange,jquery.contextMenu,list"></script>
+	<!--[if lte IE 8]><script src="js/standard.ie.js"></script><![endif]-->
+	
+	<script>
+	
+		// Search tip
+		$(document).ready(function()
+		{
+			$('#s').tip({
+				content: 'AJAX search! Try entering "add"',
+				onHover: false
+			});
+		});
+	
+	</script>
+	
+	<script>
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10643639-3']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</body>
+</html>

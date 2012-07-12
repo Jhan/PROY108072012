@@ -1,10 +1,12 @@
 package com.eomasoft.sermeden.web.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,24 +27,26 @@ public class OdontogramaController {
 	private OdontogramaService odontogramaService;
 	
 	@RequestMapping(value = "/find", params = "dniPaciente", method = RequestMethod.GET)
-	public @ResponseBody
-	JQResponse<Diente> findByDniPaciente(@RequestParam(value = "dniPaciente") String dniPaciente) {
+	public @ResponseBody List<Diente> findByDniPaciente(@RequestParam(value = "dniPaciente") String dniPaciente) {
 
 		List<Diente> dienteList = odontogramaService.findByDniPaciente(dniPaciente);
 		
-		JQResponse<Diente> response = new JQResponse<Diente>();
-		response.setRows(dienteList);
-		response.setTotal(String.valueOf(dienteList.size()));
-		return response;
+		return dienteList;
 	}
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public @ResponseBody
-	DialogResponse create2(@RequestBody Diente diente) {
+	public @ResponseBody DialogResponse create2(@RequestBody Diente diente) {
 		// TODO: Server validation
 		odontogramaService.save(diente);
 		return new DialogResponse();
 	}
+
+	@RequestMapping(value = "/save", method = RequestMethod.POST)
+	public @ResponseBody String guardar(Diente diente) throws IOException {
+		odontogramaService.save(diente);
+		return "success";
+	}
+	
 	@Inject
 	public void setOdontogramaService(OdontogramaService odontogramaService) {
 		this.odontogramaService = odontogramaService;

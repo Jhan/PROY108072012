@@ -1,0 +1,1209 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Constellation Admin Skin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- Combined stylesheets load -->
+	<!-- Load either 960.gs.fluid or 960.gs to toggle between fixed and fluid layout -->
+	<link href="css/mini3537.css?files=reset,common,form,standard,960.gs.fluid,simple-lists,block-lists,planning,table,calendars,wizard,gallery" rel="stylesheet" type="text/css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon-large.png">
+	
+	<!-- Modernizr for support detection, all javascript libs are moved right above </body> for better performance -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	<!--
+	
+	This file is from the demo website of the Constellation Admin Skin
+	
+	If you like it and wish to use it, please consider buying it on ThemeForest:
+	http://themeforest.net/item/constellation-complete-admin-skin/116461
+	
+	Thanks!
+	
+	-->
+	
+</head>
+
+<body>
+<!-- The template uses conditional comments to add wrappers div for ie8 and ie7 - just add .ie or .ie7 prefix to your css selectors when needed -->
+<!--[if lt IE 9]><div class="ie"><![endif]-->
+<!--[if lt IE 8]><div class="ie7"><![endif]-->
+	
+	<!-- Header -->
+	
+	<!-- Server status -->
+	<header><div class="container_12">
+		
+		<p id="skin-name"><small>Constellation<br> Admin Skin</small> <strong>1.5</strong></p>
+		<div class="server-info">Server: <strong>Apache (unknown)</strong></div>
+		<div class="server-info">Php: <strong>5.2.17</strong></div>
+		
+	</div></header>
+	<!-- End server status -->
+
+	<!-- Main nav -->
+	<nav id="main-nav">
+		
+		<ul class="container_12">
+			<li class="home current"><a href="javascript:void(0)" title="Home">Home</a>
+				<ul>
+					<li class="current"><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+					<li><a href="javascript:void(0)" title="My profile">My profile</a></li>
+					<li class="with-menu"><a href="javascript:void(0)" title="My settings">My settings</a>
+						<div class="menu">
+							<img src="images/menu-open-arrow.png" width="16" height="16">
+							<ul>
+								<li class="icon_address"><a href="javascript:void(0)">Browse by</a>
+									<ul>
+										<li class="icon_blog"><a href="javascript:void(0)">Blog</a>
+											<ul>
+												<li class="icon_alarm"><a href="javascript:void(0)">Recents</a>
+													<ul>
+														<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+														<li class="icon_newspaper"><a href="javascript:void(0)">Press blog</a></li>
+													</ul>
+												</li>
+												<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+												<li class="icon_computer"><a href="javascript:void(0)">Support blog</a></li>
+												<li class="icon_search"><a href="javascript:void(0)">Search...</a></li>
+											</ul>
+										</li>
+										<li class="icon_server"><a href="javascript:void(0)">Website</a></li>
+										<li class="icon_network"><a href="javascript:void(0)">Domain</a></li>
+									</ul>
+								</li>
+								<li class="icon_export"><a href="javascript:void(0)">Export</a>
+									<ul>
+										<li class="icon_doc_excel"><a href="javascript:void(0)">Excel</a></li>
+										<li class="icon_doc_csv"><a href="javascript:void(0)">CSV</a></li>
+										<li class="icon_doc_pdf"><a href="javascript:void(0)">PDF</a></li>
+										<li class="icon_doc_image"><a href="javascript:void(0)">Image</a></li>
+										<li class="icon_doc_web"><a href="javascript:void(0)">Html</a></li>
+									</ul>
+								</li>
+								<li class="sep"></li>
+								<li class="icon_refresh"><a href="javascript:void(0)">Reload</a></li>
+								<li class="icon_reset">Reset</li>
+								<li class="icon_search"><a href="javascript:void(0)">Search</a></li>
+								<li class="sep"></li>
+								<li class="icon_terminal"><a href="javascript:void(0)">Custom request</a></li>
+								<li class="icon_battery"><a href="javascript:void(0)">Stats server load</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="write"><a href="javascript:void(0)" title="Write">Write</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Articles">Articles</a></li>
+					<li><a href="javascript:void(0)" title="Add article">Add article</a></li>
+					<li><a href="javascript:void(0)" title="Posts">Posts</a></li>
+					<li><a href="javascript:void(0)" title="Add post">Add post</a></li>
+				</ul>
+			</li>
+			<li class="comments"><a href="javascript:void(0)" title="Comments">Comments</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Spams">Spams</a></li>
+				</ul>
+			</li>
+			<li class="medias"><a href="javascript:void(0)" title="Medias">Medias</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">Browse</a></li>
+					<li><a href="javascript:void(0)" title="Add file">Add file</a></li>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="users"><a href="javascript:void(0)" title="Users">Users</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">List</a></li>
+					<li><a href="javascript:void(0)" title="Add user">Add user</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="stats"><a href="javascript:void(0)" title="Stats">Stats</a></li>
+			<li class="settings"><a href="javascript:void(0)" title="Settings">Settings</a></li>
+			<li class="backup"><a href="javascript:void(0)" title="Backup">Backup</a></li>
+		</ul>
+	</nav>
+	<!-- End main nav -->
+	
+	<!-- Sub nav -->
+	<div id="sub-nav"><div class="container_12">
+		
+		<a href="javascript:void(0)" title="Help" class="nav-button"><b>Help</b></a>
+	
+		<form id="search-form" name="search-form" method="post" action="http://www.display-inline.fr/demo/constellation/template/search.php">
+			<input type="text" name="s" id="s" value="" title="Search admin..." autocomplete="off">
+		</form>
+	
+	</div></div>
+	<!-- End sub nav -->
+	
+	<!-- Status bar -->
+	<div id="status-bar"><div class="container_12">
+	
+		<ul id="status-infos">
+			<li class="spaced">Logged as: <strong>Admin</strong></li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="5 messages"><img src="images/icons/fugue/mail.png" width="16" height="16"> <strong>5</strong></a>
+				<div id="messages-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-mail">
+						<li>
+							<a href="javascript:void(0)"><strong>10:15</strong> Please update...<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> Hi<br>
+							<small>From: Jane</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> System update<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Database backup<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Re: bug report<br>
+							<small>From: Max</small></a>
+						</li>
+					</ul>
+					
+					<p id="messages-info" class="result-info"><a href="javascript:void(0)">Go to inbox &raquo;</a></p>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="25 comments"><img src="images/icons/fugue/balloon.png" width="16" height="16"> <strong>25</strong></a>
+				<div id="comments-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-comment">
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: I don't think so<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ken_54</strong>: What about using a different...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong> Sure, but no more.<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Have you seen that...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Good luck!<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Sébastien</strong>: This sure rocks!<br>
+							<small>On <strong>Another post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: Me too!<br>
+							<small>On <strong>Third post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong> This can be solved by...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: No prob.<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: I had the following...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Yes<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lian</strong>: Please make sure that...<br>
+							<small>On <strong>Last post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ann</strong> Thanks!<br>
+							<small>On <strong>Last post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Don't tell me what...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Gordon</strong>: Here is an article about...<br>
+							<small>On <strong>My another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Try to reset the value first<br>
+							<small>On <strong>Last title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Sure!<br>
+							<small>On <strong>Second post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Many</strong> Great job, keep on!<br>
+							<small>On <strong>Third post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I really like this<br>
+							<small>On <strong>First title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Paul</strong>: Hello, I have an issue with...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>June</strong>: Yuck.<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: Wow, sounds amazing, do...<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Esther</strong>: Man, this is the best...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Thanks!<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I'd say it is not safe...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+					</ul>
+					
+					<p id="comments-info" class="result-info"><a href="javascript:void(0)">Manage comments &raquo;</a></p>
+				</div>
+			</li>
+			<li><a href="login.html" class="button red" title="Logout"><span class="smaller">LOGOUT</span></a></li>
+		</ul>
+		
+		<ul id="breadcrumb">
+			<li><a href="javascript:void(0)" title="Home">Home</a></li>
+			<li><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+		</ul>
+	
+	</div></div>
+	<!-- End status bar -->
+	
+	<div id="header-shadow"></div>
+	<!-- End header -->
+	
+	<!-- Always visible control bar -->
+	<div id="control-bar" class="grey-bg clearfix"><div class="container_12">
+	
+		<div class="float-left">
+			<button type="button" onClick="document.location.href = '../index.html#pages';"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Back to demo website</button>
+		</div>
+			
+	</div></div>
+	<!-- End control bar -->
+	
+	<!-- Content -->
+	<article class="container_12">
+		
+		<section class="grid_12">
+			<div class="block-border"><form class="block-content form" id="table_form" method="post" action="#">
+				<h1>Table</h1>
+				
+				<div class="block-controls">
+					
+					<ul class="controls-buttons">
+						<li><a href="javascript:void(0)" title="Previous"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Prev</a></li>
+						<li><a href="javascript:void(0)" title="Page 1"><b>1</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 2" class="current"><b>2</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 3"><b>3</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 4"><b>4</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 5"><b>5</b></a></li>
+						<li><a href="javascript:void(0)" title="Next">Next <img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
+						<li class="sep"></li>
+						<li><a href="javascript:void(0)"><img src="images/icons/fugue/arrow-circle.png" width="16" height="16"></a></li>
+					</ul>
+					
+				</div>
+			
+				<div class="no-margin"><table class="table" cellspacing="0" width="100%">
+				
+					<thead>
+						<tr>
+							<th class="black-cell"><span class="loading"></span></th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up active"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Title
+							</th>
+							<th scope="col">Keywords</th>
+							<th scope="col">Preview</th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Date
+							</th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Size
+							</th>
+							<th scope="col" class="table-actions">Actions</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						
+						<tr>
+							<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></th>
+							<td>Lorem ipsum sit amet</td>
+							<td><ul class="keywords">
+								<li><a href="javascript:void(0)">Ocean</a></li>
+								<li class="orange-keyword"><a href="javascript:void(0)">Sun</a></li>
+							</ul></td>
+							<td><a href="javascript:void(0)"><small><img src="images/icons/fugue/image.png" width="16" height="16" class="picto"> jpg | 12 Ko</small></a></td>
+							<td>02-05-2010</td>
+							<td>320 x 240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-2" value="2"></th>
+							<td>Consectetur adipisicing elit</td>
+							<td><ul class="keywords">
+								<li class="purple-keyword">People</li>
+							</ul></td>
+							<td><a href="javascript:void(0)"><small><img src="images/icons/fugue/image.png" width="16" height="16" class="picto"> jpg | 14 Ko</small></a></td>
+							<td>10-10-2010</td>
+							<td>640 x 480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-3" value="3"></th>
+							<td>Sed do eiusmod tempor</td>
+							<td><ul class="keywords">
+								<li>Sea</li>
+								<li>Fish</li>
+								<li>Bubble</li>
+							</ul></td>
+							<td><a href="javascript:void(0)"><small><img src="images/icons/fugue/image.png" width="16" height="16" class="picto"> jpg | 9 Ko</small></a></td>
+							<td>24-03-2010</td>
+							<td>320 x 240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-4" value="4"></th>
+							<td>Incididunt</td>
+							<td class="empty">(none)</td>
+							<td><a href="javascript:void(0)"><small><img src="images/icons/fugue/image.png" width="16" height="16" class="picto"> jpg | 21 Ko</small></a></td>
+							<td>02-10-2010</td>
+							<td>320 x 240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<th scope="row" class="table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-5" value="5"></th>
+							<td>Ut labore et dolore magna</td>
+							<td><ul class="keywords">
+								<li>Ocean</li>
+							</ul></td>
+							<td><a href="javascript:void(0)"><small><img src="images/icons/fugue/image.png" width="16" height="16" class="picto"> jpg | 20 Ko</small></a></td>
+							<td>21-07-2010</td>
+							<td>320 x 240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+					</tbody>
+				
+				</table></div>
+				
+				<ul class="message no-margin">
+					<li>Results 1 - 5 out of 23</li>
+				</ul>
+				
+				<div class="block-footer">
+					<div class="float-right">
+						<label for="table-display" style="display:inline">Display mode</label>
+						<select name="table-display" id="table-display" class="small">
+							<option value="table">Table</option>
+							<option value="grid">Grid</option>
+						</select>
+					</div>
+					
+					<img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto">
+					<a href="javascript:void(0)" class="button">Select All</a>
+					<a href="javascript:void(0)" class="button">Unselect All</a>
+					<span class="sep"></span>
+					<select name="table-action" id="table-action" class="small">
+						<option value="">Action for selected...</option>
+						<option value="validate">Validate</option>
+						<option value="delete">Delete</option>
+					</select>
+					<button type="submit" class="small">Ok</button>
+				</div>
+					
+			</form></div>
+		</section>
+		
+		<section class="grid_12">
+			<div class="block-border"><form class="block-content form" id="table_form" method="post" action="#">
+				<h1>Sortable table</h1>
+			
+				<table class="table sortable no-margin" cellspacing="0" width="100%">
+				
+					<thead>
+						<tr>
+							<th class="black-cell"><span class="loading"></span></th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Title
+							</th>
+							<th scope="col">Keywords</th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Preview
+							</th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Date
+							</th>
+							<th scope="col">
+								<span class="column-sort">
+									<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+									<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+								</span>
+								Size
+							</th>
+							<th scope="col" class="table-actions">Actions</th>
+						</tr>
+					</thead>
+					
+					<tbody>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></td>
+							<td>Lorem ipsum sit amet</td>
+							<td><ul class="keywords">
+								<li><a href="javascript:void(0)">Ocean</a></li>
+								<li class="orange-keyword"><a href="javascript:void(0)">Sun</a></li>
+							</ul></td>
+							<td>12</td>
+							<td>2010-05-02</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-2" value="2"></td>
+							<td>Consectetur adipisicing elit</td>
+							<td><ul class="keywords">
+								<li class="purple-keyword">People</li>
+							</ul></td>
+							<td>14</td>
+							<td>2010-10-10</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-3" value="3"></td>
+							<td>Sed do eiusmod tempor</td>
+							<td><ul class="keywords">
+								<li>Sea</li>
+								<li>Fish</li>
+								<li>Bubble</li>
+							</ul></td>
+							<td>9</td>
+							<td>2010-03-24</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-4" value="4"></td>
+							<td>Incididunt</td>
+							<td class="empty">(none)</td>
+							<td>21</td>
+							<td>2010-10-02</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-5" value="5"></td>
+							<td>Ut labore et dolore magna</td>
+							<td><ul class="keywords">
+								<li>Ocean</li>
+							</ul></td>
+							<td>20</td>
+							<td>2010-07-21</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></td>
+							<td>Aliqua</td>
+							<td><ul class="keywords">
+								<li><a href="javascript:void(0)">Ocean</a></li>
+								<li class="orange-keyword"><a href="javascript:void(0)">Sun</a></li>
+							</ul></td>
+							<td>12</td>
+							<td>2010-08-17</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-2" value="2"></td>
+							<td>Ut enim ad minim</td>
+							<td><ul class="keywords">
+								<li class="purple-keyword">People</li>
+							</ul></td>
+							<td>15</td>
+							<td>2010-04-14</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-3" value="3"></td>
+							<td>Veniam</td>
+							<td><ul class="keywords">
+								<li>Sea</li>
+								<li>Fish</li>
+							</ul></td>
+							<td>18</td>
+							<td>2010-02-02</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-4" value="4"></td>
+							<td>Quis nostrud exercitation ullamco</td>
+							<td class="empty">(none)</td>
+							<td>9</td>
+							<td>2010-09-07</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-5" value="5"></td>
+							<td>Laboris nisi ut aliquip</td>
+							<td><ul class="keywords">
+								<li>Ocean</li>
+								<li>Bubble</li>
+							</ul></td>
+							<td>8</td>
+							<td>2010-03-12</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-2" value="2"></td>
+							<td>Ex ea commodo consequat</td>
+							<td><ul class="keywords">
+								<li class="purple-keyword">People</li>
+								<li>Fish</li>
+							</ul></td>
+							<td>14</td>
+							<td>2010-03-14</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-3" value="3"></td>
+							<td>Duis aute irure</td>
+							<td><ul class="keywords">
+								<li>Sea</li>
+								<li>Bubble</li>
+							</ul></td>
+							<td>14</td>
+							<td>2010-05-01</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-4" value="4"></td>
+							<td>Dolor in reprehenderit</td>
+							<td class="empty">(none)</td>
+							<td>54</td>
+							<td>2010-06-18</td>
+							<td>1024.768</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-5" value="5"></td>
+							<td>In voluptate velit </td>
+							<td><ul class="keywords">
+								<li>Ocean</li>
+							</ul></td>
+							<td>22</td>
+							<td>2010-06-30</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-1" value="1"></td>
+							<td>Esse cillum</td>
+							<td><ul class="keywords">
+								<li><a href="javascript:void(0)">Ocean</a></li>
+								<li class="orange-keyword"><a href="javascript:void(0)">Sun</a></li>
+							</ul></td>
+							<td>12</td>
+							<td>2010-02-27</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-2" value="2"></td>
+							<td>Dolore eu fugiat nulla pariatur</td>
+							<td><ul class="keywords">
+								<li class="purple-keyword">People</li>
+							</ul></td>
+							<td>16</td>
+							<td>2010-04-14</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-3" value="3"></td>
+							<td>Excepteur sint occaecat</td>
+							<td><ul class="keywords">
+								<li>Sea</li>
+								<li>Fish</li>
+								<li>Bubble</li>
+							</ul></td>
+							<td>19</td>
+							<td>2010-07-12</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-4" value="4"></td>
+							<td>Cupidatat non proident</td>
+							<td class="empty">(none)</td>
+							<td>18</td>
+							<td>2010-08-21</td>
+							<td>320.240</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="th table-check-cell"><input type="checkbox" name="selected[]" id="table-selected-5" value="5"></td>
+							<td>Sunt in culpa</td>
+							<td><ul class="keywords">
+								<li>Ocean</li>
+							</ul></td>
+							<td>17</td>
+							<td>2010-10-04</td>
+							<td>640.480</td>
+							<td class="table-actions">
+								<a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a>
+								<a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a>
+							</td>
+						</tr>
+						
+					</tbody>
+				
+				</table>
+					
+			</form></div>
+		</section>
+		
+		<section class="grid_12">
+			<div class="block-border"><form class="block-content form" name="table_form" id="table_form" method="post" action="#">
+				<h1>
+					Grid view
+					<a href="javascript:void(0)"><img src="images/icons/fugue/plus-circle-blue.png" width="16" height="16"> add</a>
+				</h1>
+				
+				<div class="block-controls">
+					
+					<ul class="controls-buttons">
+						<li><a href="javascript:void(0)" title="Previous"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Prev</a></li>
+						<li><a href="javascript:void(0)" title="Page 1"><b>1</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 2" class="current"><b>2</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 3"><b>3</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 4"><b>4</b></a></li>
+						<li><a href="javascript:void(0)" title="Page 5"><b>5</b></a></li>
+						<li><a href="javascript:void(0)" title="Next">Next <img src="images/icons/fugue/navigation.png" width="16" height="16"></a></li>
+						<li class="sep"></li>
+						<li><a href="javascript:void(0)"><img src="images/icons/fugue/arrow-circle.png" width="16" height="16"></a></li>
+					</ul>
+					
+				</div>
+				
+				<div class="with-head no-margin">
+					
+					<div class="head">
+						<div class="black-cell with-gap"><span class="success"></span></div>
+						<div class="black-cell">Sort by</div>
+						<div>
+							<span class="column-sort">
+								<a href="javascript:void(0)" title="Sort up" class="sort-up active"></a>
+								<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+							</span>
+							Name
+						</div>
+						<div>
+							<span class="column-sort">
+								<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+								<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+							</span>
+							Date
+						</div>
+						<div>
+							<span class="column-sort">
+								<a href="javascript:void(0)" title="Sort up" class="sort-up"></a>
+								<a href="javascript:void(0)" title="Sort down" class="sort-down"></a>
+							</span>
+							Status
+						</div>
+					</div>
+					
+					<ul class="grid dark-grey-gradient">
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-1" value="1"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-2" value="2"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-3" value="3"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-4" value="4"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-5" value="5"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-6" value="6"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-7" value="7"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-8" value="8"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-9" value="9"></li>
+							</ul>
+						</li>
+						
+						<li>
+							<div class="grid-picto user">
+								<small>Administrator</small>
+								<p class="grid-name">John Doe</p>
+								<p class="grid-details">Age: <b>28</b><br>
+								Gender: <b>male</b><br>
+								Country: <b>USA</b></p>
+							</div>
+							<ul class="grid-actions">
+								<li><a href="javascript:void(0)" title="Edit" class="with-tip"><img src="images/icons/fugue/pencil.png" width="16" height="16"></a></li>
+								<li><a href="javascript:void(0)" title="Delete" class="with-tip"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"></a></li>
+								<li><input type="checkbox" name="selected[]" id="grid-selected-10" value="10"></li>
+							</ul>
+						</li>
+						
+					</ul>
+					
+				</div>
+				
+				<ul class="message no-margin">
+					<li>Results 1 - 10 out of 47</li>
+				</ul>
+				
+				<div class="block-footer">
+					<div class="float-right">
+						<label for="table-display" style="display:inline">Display mode</label>
+						<select name="table-display" id="table-display" class="small">
+							<option value="table">Table</option>
+							<option value="grid" selected="selected">Grid</option>
+						</select>
+					</div>
+					
+					<img src="images/icons/fugue/arrow-curve-000-left.png" width="16" height="16" class="picto">
+					<a href="javascript:void(0)" class="button">Select All</a>
+					<a href="javascript:void(0)" class="button">Unselect All</a>
+					<span class="sep"></span>
+					<select name="table-action" id="table-action" class="small">
+						<option value="">Action for selected...</option>
+						<option value="validate">Validate</option>
+						<option value="delete">Delete</option>
+					</select>
+					<button type="submit" class="small">Ok</button>
+				</div>
+					
+			</form></div>
+		</section>
+		
+	</article>
+	
+	<!-- End content -->
+	
+	<footer>
+		
+		<div class="float-right">
+			<a href="#top" class="button"><img src="images/icons/fugue/navigation-090.png" width="16" height="16"> Page top</a>
+		</div>
+		
+	</footer>
+	
+	<!-- Combined JS load -->
+	<script src="js/mini5c1b.php?files=libs/jquery-1.6.3.min,old-browsers,jquery.accessibleList,searchField,common,standard,jquery.tip,libs/jquery.hashchange,jquery.contextMenu,list"></script>
+	<!--[if lte IE 8]><script src="js/standard.ie.js"></script><![endif]-->
+	
+	<!-- Plugins -->
+	<script  src="js/libs/jquery.dataTables.min.js"></script>
+	
+	<script>
+	
+		// Search tip
+		$(document).ready(function()
+		{
+			$('#s').tip({
+				content: 'AJAX search! Try entering "add"',
+				onHover: false
+			});
+			
+			/*
+			 * Table sorting
+			 */
+			
+			// A small classes setup...
+			$.fn.dataTableExt.oStdClasses.sWrapper = 'no-margin last-child';
+			$.fn.dataTableExt.oStdClasses.sInfo = 'message no-margin';
+			$.fn.dataTableExt.oStdClasses.sLength = 'float-left';
+			$.fn.dataTableExt.oStdClasses.sFilter = 'float-right';
+			$.fn.dataTableExt.oStdClasses.sPaging = 'sub-hover paging_';
+			$.fn.dataTableExt.oStdClasses.sPagePrevEnabled = 'control-prev';
+			$.fn.dataTableExt.oStdClasses.sPagePrevDisabled = 'control-prev disabled';
+			$.fn.dataTableExt.oStdClasses.sPageNextEnabled = 'control-next';
+			$.fn.dataTableExt.oStdClasses.sPageNextDisabled = 'control-next disabled';
+			$.fn.dataTableExt.oStdClasses.sPageFirst = 'control-first';
+			$.fn.dataTableExt.oStdClasses.sPagePrevious = 'control-prev';
+			$.fn.dataTableExt.oStdClasses.sPageNext = 'control-next';
+			$.fn.dataTableExt.oStdClasses.sPageLast = 'control-last';
+			
+			// Apply to table
+			$('.sortable').each(function(i)
+			{
+				// DataTable config
+				var table = $(this),
+					oTable = table.dataTable({
+						/*
+						 * We set specific options for each columns here. Some columns contain raw data to enable correct sorting, so we convert it for display
+						 * @url http://www.datatables.net/usage/columns
+						 */
+						aoColumns: [
+							{ bSortable: false },	// No sorting for this columns, as it only contains checkboxes
+							{ sType: 'string' },
+							{ bSortable: false },
+							{ sType: 'numeric', bUseRendered: false, fnRender: function(obj) // Append unit and add icon
+								{
+									return '<small><img src="images/icons/fugue/image.png" width="16" height="16" class="picto"> '+obj.aData[obj.iDataColumn]+' Ko</small>';
+								}
+							},
+							{ sType: 'date' },
+							{ sType: 'numeric', bUseRendered: false, fnRender: function(obj) // Size is given as float for sorting, convert to format 000 x 000
+								{
+									return obj.aData[obj.iDataColumn].split('.').join(' x ');
+								}
+							},
+							{ bSortable: false }	// No sorting for actions column
+						],
+						
+						/*
+						 * Set DOM structure for table controls
+						 * @url http://www.datatables.net/examples/basic_init/dom.html
+						 */
+						sDom: '<"block-controls"<"controls-buttons"p>>rti<"block-footer clearfix"lf>',
+						
+						/*
+						 * Callback to apply template setup
+						 */
+						fnDrawCallback: function()
+						{
+							this.parent().applyTemplateSetup();
+						},
+						fnInitComplete: function()
+						{
+							this.parent().applyTemplateSetup();
+						}
+					});
+				
+				// Sorting arrows behaviour
+				table.find('thead .sort-up').click(function(event)
+				{
+					// Stop link behaviour
+					event.preventDefault();
+					
+					// Find column index
+					var column = $(this).closest('th'),
+						columnIndex = column.parent().children().index(column.get(0));
+					
+					// Send command
+					oTable.fnSort([[columnIndex, 'asc']]);
+					
+					// Prevent bubbling
+					return false;
+				});
+				table.find('thead .sort-down').click(function(event)
+				{
+					// Stop link behaviour
+					event.preventDefault();
+					
+					// Find column index
+					var column = $(this).closest('th'),
+						columnIndex = column.parent().children().index(column.get(0));
+					
+					// Send command
+					oTable.fnSort([[columnIndex, 'desc']]);
+					
+					// Prevent bubbling
+					return false;
+				});
+			});
+		});
+	
+	</script>
+	
+	<script>
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10643639-3']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Constellation Admin Skin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	
+	<!-- Combined stylesheets load -->
+	<!-- Load either 960.gs.fluid or 960.gs to toggle between fixed and fluid layout -->
+	<link href="css/mini3537.css?files=reset,common,form,standard,960.gs.fluid,simple-lists,block-lists,planning,table,calendars,wizard,gallery" rel="stylesheet" type="text/css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon-large.png">
+	
+	<!-- Modernizr for support detection, all javascript libs are moved right above </body> for better performance -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	<!--
+	
+	This file is from the demo website of the Constellation Admin Skin
+	
+	If you like it and wish to use it, please consider buying it on ThemeForest:
+	http://themeforest.net/item/constellation-complete-admin-skin/116461
+	
+	Thanks!
+	
+	-->
+	
+</head>
+
+<body>
+<!-- The template uses conditional comments to add wrappers div for ie8 and ie7 - just add .ie or .ie7 prefix to your css selectors when needed -->
+<!--[if lt IE 9]><div class="ie"><![endif]-->
+<!--[if lt IE 8]><div class="ie7"><![endif]-->
+	
+	<!-- Header -->
+	
+	<!-- Server status -->
+	<header><div class="container_12">
+		
+		<p id="skin-name"><small>Constellation<br> Admin Skin</small> <strong>1.5</strong></p>
+		<div class="server-info">Server: <strong>Apache 2.2.X (OVH)</strong></div>
+		<div class="server-info">Php: <strong>5.2.17</strong></div>
+		
+	</div></header>
+	<!-- End server status -->
+
+	<!-- Main nav -->
+	<nav id="main-nav">
+		
+		<ul class="container_12">
+			<li class="home current"><a href="javascript:void(0)" title="Home">Home</a>
+				<ul>
+					<li class="current"><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+					<li><a href="javascript:void(0)" title="My profile">My profile</a></li>
+					<li class="with-menu"><a href="javascript:void(0)" title="My settings">My settings</a>
+						<div class="menu">
+							<img src="images/menu-open-arrow.png" width="16" height="16">
+							<ul>
+								<li class="icon_address"><a href="javascript:void(0)">Browse by</a>
+									<ul>
+										<li class="icon_blog"><a href="javascript:void(0)">Blog</a>
+											<ul>
+												<li class="icon_alarm"><a href="javascript:void(0)">Recents</a>
+													<ul>
+														<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+														<li class="icon_newspaper"><a href="javascript:void(0)">Press blog</a></li>
+													</ul>
+												</li>
+												<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+												<li class="icon_computer"><a href="javascript:void(0)">Support blog</a></li>
+												<li class="icon_search"><a href="javascript:void(0)">Search...</a></li>
+											</ul>
+										</li>
+										<li class="icon_server"><a href="javascript:void(0)">Website</a></li>
+										<li class="icon_network"><a href="javascript:void(0)">Domain</a></li>
+									</ul>
+								</li>
+								<li class="icon_export"><a href="javascript:void(0)">Export</a>
+									<ul>
+										<li class="icon_doc_excel"><a href="javascript:void(0)">Excel</a></li>
+										<li class="icon_doc_csv"><a href="javascript:void(0)">CSV</a></li>
+										<li class="icon_doc_pdf"><a href="javascript:void(0)">PDF</a></li>
+										<li class="icon_doc_image"><a href="javascript:void(0)">Image</a></li>
+										<li class="icon_doc_web"><a href="javascript:void(0)">Html</a></li>
+									</ul>
+								</li>
+								<li class="sep"></li>
+								<li class="icon_refresh"><a href="javascript:void(0)">Reload</a></li>
+								<li class="icon_reset">Reset</li>
+								<li class="icon_search"><a href="javascript:void(0)">Search</a></li>
+								<li class="sep"></li>
+								<li class="icon_terminal"><a href="javascript:void(0)">Custom request</a></li>
+								<li class="icon_battery"><a href="javascript:void(0)">Stats server load</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</li>
+			<li class="write"><a href="javascript:void(0)" title="Write">Write</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Articles">Articles</a></li>
+					<li><a href="javascript:void(0)" title="Add article">Add article</a></li>
+					<li><a href="javascript:void(0)" title="Posts">Posts</a></li>
+					<li><a href="javascript:void(0)" title="Add post">Add post</a></li>
+				</ul>
+			</li>
+			<li class="comments"><a href="javascript:void(0)" title="Comments">Comments</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Spams">Spams</a></li>
+				</ul>
+			</li>
+			<li class="medias"><a href="javascript:void(0)" title="Medias">Medias</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">Browse</a></li>
+					<li><a href="javascript:void(0)" title="Add file">Add file</a></li>
+					<li><a href="javascript:void(0)" title="Manage">Manage</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="users"><a href="javascript:void(0)" title="Users">Users</a>
+				<ul>
+					<li><a href="javascript:void(0)" title="Browse">List</a></li>
+					<li><a href="javascript:void(0)" title="Add user">Add user</a></li>
+					<li><a href="javascript:void(0)" title="Settings">Settings</a></li>
+				</ul>
+			</li>
+			<li class="stats"><a href="javascript:void(0)" title="Stats">Stats</a></li>
+			<li class="settings"><a href="javascript:void(0)" title="Settings">Settings</a></li>
+			<li class="backup"><a href="javascript:void(0)" title="Backup">Backup</a></li>
+		</ul>
+	</nav>
+	<!-- End main nav -->
+	
+	<!-- Sub nav -->
+	<div id="sub-nav"><div class="container_12">
+		
+		<a href="javascript:void(0)" title="Help" class="nav-button"><b>Help</b></a>
+	
+		<form id="search-form" name="search-form" method="post" action="http://www.display-inline.fr/demo/constellation/template/search.php">
+			<input type="text" name="s" id="s" value="" title="Search admin..." autocomplete="off">
+		</form>
+	
+	</div></div>
+	<!-- End sub nav -->
+	
+	<!-- Status bar -->
+	<div id="status-bar"><div class="container_12">
+	
+		<ul id="status-infos">
+			<li class="spaced">Logged as: <strong>Admin</strong></li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="5 messages"><img src="images/icons/fugue/mail.png" width="16" height="16"> <strong>5</strong></a>
+				<div id="messages-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-mail">
+						<li>
+							<a href="javascript:void(0)"><strong>10:15</strong> Please update...<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> Hi<br>
+							<small>From: Jane</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Yest.</strong> System update<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Database backup<br>
+							<small>From: System</small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>2 days</strong> Re: bug report<br>
+							<small>From: Max</small></a>
+						</li>
+					</ul>
+					
+					<p id="messages-info" class="result-info"><a href="javascript:void(0)">Go to inbox &raquo;</a></p>
+				</div>
+			</li>
+			<li>
+				<a href="javascript:void(0)" class="button" title="25 comments"><img src="images/icons/fugue/balloon.png" width="16" height="16"> <strong>25</strong></a>
+				<div id="comments-list" class="result-block">
+					<span class="arrow"><span></span></span>
+					
+					<ul class="small-files-list icon-comment">
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: I don't think so<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ken_54</strong>: What about using a different...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong> Sure, but no more.<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Have you seen that...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Good luck!<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Sébastien</strong>: This sure rocks!<br>
+							<small>On <strong>Another post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: Me too!<br>
+							<small>On <strong>Third post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong> This can be solved by...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: No prob.<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: I had the following...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Anonymous</strong>: Yes<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lian</strong>: Please make sure that...<br>
+							<small>On <strong>Last post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Ann</strong> Thanks!<br>
+							<small>On <strong>Last post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Don't tell me what...<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Gordon</strong>: Here is an article about...<br>
+							<small>On <strong>My another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Try to reset the value first<br>
+							<small>On <strong>Last title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Lee</strong>: Sure!<br>
+							<small>On <strong>Second post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Many</strong> Great job, keep on!<br>
+							<small>On <strong>Third post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I really like this<br>
+							<small>On <strong>First title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Paul</strong>: Hello, I have an issue with...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>June</strong>: Yuck.<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Jane</strong>: Wow, sounds amazing, do...<br>
+							<small>On <strong>Another title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Esther</strong>: Man, this is the best...<br>
+							<small>On <strong>Another post</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>Max</strong>: Thanks!<br>
+							<small>On <strong>Post title</strong></small></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)"><strong>John</strong>: I'd say it is not safe...<br>
+							<small>On <strong>My first post</strong></small></a>
+						</li>
+					</ul>
+					
+					<p id="comments-info" class="result-info"><a href="javascript:void(0)">Manage comments &raquo;</a></p>
+				</div>
+			</li>
+			<li><a href="login.html" class="button red" title="Logout"><span class="smaller">LOGOUT</span></a></li>
+		</ul>
+		
+		<ul id="breadcrumb">
+			<li><a href="javascript:void(0)" title="Home">Home</a></li>
+			<li><a href="javascript:void(0)" title="Dashboard">Dashboard</a></li>
+		</ul>
+	
+	</div></div>
+	<!-- End status bar -->
+	
+	<div id="header-shadow"></div>
+	<!-- End header -->
+	
+	<!-- Always visible control bar -->
+	<div id="control-bar" class="grey-bg clearfix"><div class="container_12">
+	
+		<div class="float-left">
+			<button type="button" onClick="document.location.href = '../index.html#pages';"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"> Back to demo website</button>
+			<button type="button" onClick="openModal()">Open modal</button>
+		</div>
+			
+	</div></div>
+	<!-- End control bar -->
+	
+	<!-- Content -->
+	<article class="container_12">
+		
+		<section class="grid_4">
+			<!--<div class="block-border"><div class="block-content">-->
+				<h1>Favourites</h1>
+				
+				<ul class="favorites no-margin with-tip" title="Context menu available!">
+					
+					<li>
+						<img src="images/icons/web-app/48/Info.png" width="48" height="48">
+						<a href="javascript:void(0)">Settings<br>
+						<small>System &gt; Settings</small></a>
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Move down"><img src="images/icons/fugue/arrow-270.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"> Delete</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<img src="images/icons/web-app/48/Line-Chart.png" width="48" height="48">
+						<a href="javascript:void(0)">Bandwidth usage<br>
+						<small>Stats &gt; Server &gt; Bandwidth usage</small></a>
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Move up"><img src="images/icons/fugue/arrow-090.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Move down"><img src="images/icons/fugue/arrow-270.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"> Delete</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<img src="images/icons/web-app/48/Modify.png" width="48" height="48">
+						<a href="javascript:void(0)">New post<br>
+						<small>Write &gt; New post</small></a>
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Move up"><img src="images/icons/fugue/arrow-090.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Move down"><img src="images/icons/fugue/arrow-270.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"> Delete</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<img src="images/icons/web-app/48/Pie-Chart.png" width="48" height="48">
+						<a href="javascript:void(0)">Browsers stats<br>
+						<small>Stats &gt; Sites &gt; Browsers stats</small></a>
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Move up"><img src="images/icons/fugue/arrow-090.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Move down"><img src="images/icons/fugue/arrow-270.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"> Delete</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<img src="images/icons/web-app/48/Comment.png" width="48" height="48">
+						<a href="javascript:void(0)">Manage comments<br>
+						<small>Comments &gt; Manage comments</small></a>
+						<ul class="mini-menu">
+							<li><a href="javascript:void(0)" title="Move up"><img src="images/icons/fugue/arrow-090.png" width="16" height="16"></a></li>
+							<li><a href="javascript:void(0)" title="Delete"><img src="images/icons/fugue/cross-circle.png" width="16" height="16"> Delete</a></li>
+						</ul>
+					</li>
+					
+				</ul>
+				
+				<form class="form" name="stats_options" id="stats_options" method="post" action="#">
+					<fieldset class="grey-bg no-margin">
+						<legend>Add favourite</legend>
+						<p class="input-with-button">
+							<label for="simple-action">Select page</label>
+							<select name="simple-action" id="simple-action">
+								<option value=""></option>
+								<option value="1">Page 1</option>
+								<option value="2">Page 2</option>
+							</select>
+							<button type="button">Add</button>
+						</p>
+					</fieldset>
+				</form>
+				
+			<!--</div></div>-->
+		</section>
+		
+		<section class="grid_8">
+			<div class="block-border"><div class="block-content">
+				<!-- We could put the menu inside a H1, but to get valid syntax we'll use a wrapper -->
+				<div class="h1 with-menu">
+					<h1>Web stats</h1>
+					<div class="menu">
+						<img src="images/menu-open-arrow.png" width="16" height="16">
+						<ul>
+							<li class="icon_address"><a href="javascript:void(0)">Browse by</a>
+								<ul>
+									<li class="icon_blog"><a href="javascript:void(0)">Blog</a>
+										<ul>
+											<li class="icon_alarm"><a href="javascript:void(0)">Recents</a>
+												<ul>
+													<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+													<li class="icon_newspaper"><a href="javascript:void(0)">Press blog</a></li>
+												</ul>
+											</li>
+											<li class="icon_building"><a href="javascript:void(0)">Corporate blog</a></li>
+											<li class="icon_computer"><a href="javascript:void(0)">Support blog</a></li>
+											<li class="icon_search"><a href="javascript:void(0)">Search...</a></li>
+										</ul>
+									</li>
+									<li class="icon_server"><a href="javascript:void(0)">Website</a></li>
+									<li class="icon_network"><a href="javascript:void(0)">Domain</a></li>
+								</ul>
+							</li>
+							<li class="icon_export"><a href="javascript:void(0)">Export</a>
+								<ul>
+									<li class="icon_doc_excel"><a href="javascript:void(0)">Excel</a></li>
+									<li class="icon_doc_csv"><a href="javascript:void(0)">CSV</a></li>
+									<li class="icon_doc_pdf"><a href="javascript:void(0)">PDF</a></li>
+									<li class="icon_doc_image"><a href="javascript:void(0)">Image</a></li>
+									<li class="icon_doc_web"><a href="javascript:void(0)">Html</a></li>
+								</ul>
+							</li>
+							<li class="sep"></li>
+							<li class="icon_refresh"><a href="javascript:void(0)">Reload</a></li>
+							<li class="icon_reset">Reset</li>
+							<li class="icon_search"><a href="javascript:void(0)">Search</a></li>
+							<li class="sep"></li>
+							<li class="icon_terminal"><a href="javascript:void(0)">Custom request</a></li>
+							<li class="icon_battery"><a href="javascript:void(0)">Stats server load</a></li>
+						</ul>
+					</div>
+				</div>
+			
+				<div class="block-controls">
+					
+					<ul class="controls-tabs js-tabs same-height with-children-tip">
+						<li><a href="#tab-stats" title="Charts"><img src="images/icons/web-app/24/Bar-Chart.png" width="24" height="24"></a></li>
+						<li><a href="#tab-comments" title="Comments"><img src="images/icons/web-app/24/Comment.png" width="24" height="24"></a></li>
+						<li><a href="#tab-medias" title="Medias"><img src="images/icons/web-app/24/Picture.png" width="24" height="24"></a></li>
+						<li><a href="#tab-users" title="Users"><img src="images/icons/web-app/24/Profile.png" width="24" height="24"></a></li>
+						<li><a href="#tab-infos" title="Informations"><img src="images/icons/web-app/24/Info.png" width="24" height="24"></a></li>
+					</ul>
+					
+				</div>
+				
+				<form class="form" id="tab-stats" method="post" action="#">
+					
+					<fieldset class="grey-bg">
+						<legend><a href="javascript:void(0)">Options</a></legend>
+						
+						<div class="float-left gutter-right">
+							<label for="stats-period">Period</label>
+							<span class="input-type-text"><input type="text" name="stats-period" id="stats-period" value=""><img src="images/icons/fugue/calendar-month.png" width="16" height="16"></span>
+						</div>
+						<div class="float-left gutter-right">
+							<span class="label">Display</span>
+							<p class="input-height grey-bg">
+								<input type="checkbox" name="stats-display[]" id="stats-display-0" value="0">&nbsp;<label for="stats-display-0">Views</label>
+								<input type="checkbox" name="stats-display[]" id="stats-display-1" value="1">&nbsp;<label for="stats-display-1">Unique visitors</label>
+							</p>
+						</div>
+						<div class="float-left gutter-right">
+							<span class="label">Sites</span>
+							<p class="input-height grey-bg">
+								<input type="radio" name="stats-sites" id="stats-sites-0" value="0">&nbsp;<label for="stats-sites-0">Group</label>
+								<input type="radio" name="stats-sites" id="stats-sites-1" value="1">&nbsp;<label for="stats-sites-1">Separate</label>
+							</p>
+						</div>
+						<div class="float-left">
+							<span class="label">Mode</span>
+							<select name="stats-sites" id="stats-sites-0">
+								<option value="0">Bars</option>
+								<option value="0">Lines</option>
+							</select>
+						</div>
+					</fieldset>
+					<div id="chart_div" style="height:330px;"></div>
+					
+				</form>
+				
+				<div id="tab-comments" class="with-margin">
+					<!-- Content is loaded dynamically at bottom in the javascript section -->
+				</div>
+				
+				<div id="tab-medias" class="with-margin">
+					<p>Medias</p>
+				</div>
+				
+				<div id="tab-users" class="with-margin">
+					<p>Users</p>
+				</div>
+				
+				<div id="tab-infos" class="with-margin">
+					<p>Infos</p>
+				</div>
+				
+				<ul class="message no-margin">
+					<li>This is an <strong>information message</strong>, inside a box</li>
+				</ul>
+				
+			</div></div>
+		</section>
+		
+		<div class="clear"></div>
+		
+	</article>
+	
+	<!-- End content -->
+	
+	<footer>
+		
+		<div class="float-right">
+			<a href="#top" class="button"><img src="images/icons/fugue/navigation-090.png" width="16" height="16"> Page top</a>
+		</div>
+		
+	</footer>
+	
+	<!-- Combined JS load -->
+	<script src="js/minie721.php?files=libs/jquery-1.6.3.min,old-browsers,jquery.accessibleList,searchField,common,standard,jquery.tip,libs/jquery.hashchange,jquery.contextMenu,jquery.modal,list"></script>
+	<!--[if lte IE 8]><script src="js/standard.ie.js"></script><![endif]-->
+	
+	<!-- Charts library -->
+	<!--Load the AJAX API-->
+	<script src="http://www.google.com/jsapi"></script>
+	<script>
+		
+		/*
+		 * This script is dedicated to building and refreshing the demo chart
+		 * Remove if not needed
+		 */
+		
+		// Load the Visualization API and the piechart package.
+		google.load('visualization', '1', {'packages':['corechart']});
+		
+		// Add listener for tab
+		$('#tab-stats').onTabShow(function() { drawVisitorsChart(); }, true);
+		
+		// Handle viewport resizing
+		var previousWidth = $(window).width();
+		$(window).resize(function()
+		{
+			if (previousWidth != $(window).width())
+			{
+				drawVisitorsChart();
+				previousWidth = $(window).width();
+			}
+		});
+		
+		// Demo chart
+		function drawVisitorsChart() {
+
+			// Create our data table.
+			var data = new google.visualization.DataTable();
+			var raw_data = [['Website', 50, 73, 104, 129, 146, 176, 139, 149, 218, 194, 96, 53],
+							['Shop', 82, 77, 98, 94, 105, 81, 104, 104, 92, 83, 107, 91],
+							['Forum', 50, 39, 39, 41, 47, 49, 59, 59, 52, 64, 59, 51],
+							['Others', 45, 35, 35, 39, 53, 76, 56, 59, 48, 40, 48, 21]];
+			
+			var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+			
+			data.addColumn('string', 'Month');
+			for (var i = 0; i < raw_data.length; ++i)
+			{
+				data.addColumn('number', raw_data[i][0]);
+			}
+			
+			data.addRows(months.length);
+			
+			for (var j = 0; j < months.length; ++j)
+			{
+				data.setValue(j, 0, months[j]);
+			}
+			for (var i = 0; i < raw_data.length; ++i)
+			{
+				for (var j = 1; j < raw_data[i].length; ++j)
+				{
+					data.setValue(j-1, i+1, raw_data[i][j]);
+				}
+			}
+			
+			// Create and draw the visualization.
+			var div = $('#chart_div');
+			new google.visualization.ColumnChart(div.get(0)).draw(data, {
+				title: 'Monthly unique visitors count',
+				width: div.width(),
+				height: 330,
+				legend: 'right',
+				yAxis: {title: '(thousands)'}
+			});
+			
+			// Message
+			notify('Chart updated');
+		};
+		
+	</script>
+	
+	<!-- Other setups -->
+	<script>
+	
+		// Example context menu
+		$(document).ready(function()
+		{
+			// Context menu for all favorites
+			$('.favorites li').bind('contextMenu', function(event, list)
+			{
+				var li = $(this);
+				
+				// Add links to the menu
+				if (li.prev().length > 0)
+				{
+					list.push({ text: 'Move up', link:'#', icon:'up' });
+				}
+				if (li.next().length > 0)
+				{
+					list.push({ text: 'Move down', link:'#', icon:'down' });
+				}
+				list.push(false);	// Separator
+				list.push({ text: 'Delete', link:'#', icon:'delete' });
+				list.push({ text: 'Edit', link:'#', icon:'edit' });
+			});
+			
+			// Extra options for the first one
+			$('.favorites li:first').bind('contextMenu', function(event, list)
+			{
+				list.push(false);	// Separator
+				list.push({ text: 'Settings', icon:'terminal', link:'#', subs:[
+					{ text: 'General settings', link: '#', icon: 'blog' },
+					{ text: 'System settings', link: '#', icon: 'server' },
+					{ text: 'Website settings', link: '#', icon: 'network' }
+				] });
+			});
+			
+			$('#s').tip({
+				content: 'AJAX search! Try entering "add"',
+				onHover: false
+			});
+		});
+		
+		// Demo modal
+		function openModal()
+		{
+			$.modal({
+				content: '<p>This is an example of modal window. You can open several at the same time (click button below!), move them and resize them.</p>'+
+						  '<p>The plugin provides several other functions to control them, try below:</p>'+
+						  '<ul class="simple-list with-icon">'+
+						  '    <li><a href="javascript:void(0)" onclick="$(this).getModalWindow().setModalTitle(\'\')">Remove title</a></li>'+
+						  '    <li><a href="javascript:void(0)" onclick="$(this).getModalWindow().setModalTitle(\'New title\')">Change title</a></li>'+
+						  '    <li><a href="javascript:void(0)" onclick="$(this).getModalWindow().loadModalContent(\'ajax-modal.html\')">Load Ajax content</a></li>'+
+						  '</ul>',
+				title: 'Example modal window',
+				maxWidth: 500,
+				buttons: {
+					'Open new modal': function(win) { openModal(); },
+					'Close': function(win) { win.closeModal(); }
+				}
+			});
+		}
+		
+	</script>
+	
+	<script>
+	
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10643639-3']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	
+	</script>
+</body>
+</html>

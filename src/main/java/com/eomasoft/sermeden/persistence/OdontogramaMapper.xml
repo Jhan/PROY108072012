@@ -16,9 +16,40 @@
 		WHERE PS.DNI = #{param1};
 	</select>
 	
-	<insert id="insert" parameterType="Patient" useGeneratedKeys="true" keyColumn="ID" keyProperty="id">
+	<insert id="insert" parameterType="Diente" keyColumn="ID" keyProperty="id">
+		INSERT INTO TBL_DIENTE 
+		(ID, IDESTOM, NRO, TIPO, ESTADO, C_INC, C_EST, S1_INC, S1_EST,
+		S2_INC, S2_EST, S3_INC, S3_EST, S4_INC, S4_EST, S5_INC, S5_EST,
+		LD_INC, LD_EST, LI_INC, LI_EST) VALUES 
+		(#{id}, #{idEstom}, #{nro}, #{tipo}, #{estado}, #{c_inc}, #{c_est},
+		 #{s1_inc}, #{s1_est}, #{s2_inc}, #{s2_est}, #{s3_inc}, #{s3_est},
+		 #{s4_inc}, #{s4_est}, #{s5_inc}, #{s5_est}, #{ld_inc}, #{ld_est},
+		 #{li_inc}, #{li_est})
 	</insert>
 	
-	<update id="update" parameterType="Patient">
+	<update id="update" parameterType="Diente">
+		UPDATE TBL_DIENTE 
+		SET 
+		IDESTOM = #{idEstom,jdbcType=INTEGER},
+		NRO = #{nro,jdbcType=INTEGER}, 
+		TIPO = #{tipo,jdbcType=INTEGER}, 
+		ESTADO = #{estado,jdbcType=INTEGER}, 
+		C_INC = #{c_inc,jdbcType=INTEGER}, 
+		C_EST = #{c_est,jdbcType=INTEGER}, 
+		S1_INC = #{s1_inc,jdbcType=INTEGER}, 
+		S1_EST = #{s1_est,jdbcType=INTEGER},
+		S2_INC = #{s2_inc,jdbcType=INTEGER}, 
+		S2_EST = #{s2_est,jdbcType=INTEGER}, 
+		S3_INC = #{s3_inc,jdbcType=INTEGER}, 
+		S3_EST = #{s3_est,jdbcType=INTEGER}, 
+		S4_INC = #{s4_inc,jdbcType=INTEGER}, 
+		S4_EST = #{s4_est,jdbcType=INTEGER}, 
+		S5_INC = #{s5_inc,jdbcType=INTEGER}, 
+		S5_EST = #{s5_est,jdbcType=INTEGER},
+		LD_INC = #{ld_inc,jdbcType=INTEGER}, 
+		LD_EST = #{ld_est,jdbcType=INTEGER}, 
+		LI_INC = #{li_inc,jdbcType=INTEGER}, 
+		LI_EST = #{li_est,jdbcType=INTEGER} 
+		WHERE ID = #{id,jdbcType=INTEGER}
 	</update>
 </mapper>

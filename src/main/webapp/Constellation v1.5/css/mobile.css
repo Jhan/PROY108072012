@@ -1,0 +1,130 @@
+html {
+	overflow: hidden;
+	height: 100%;
+}
+body {
+	height: 100%;
+	background-image: url(../images/bg-iphone.png);
+}
+
+#iphone {
+	width: 430px;
+	height: 760px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -380px;
+	margin-left: -215px;
+	background: url(../images/iphone.png) no-repeat;
+	z-index: 10;
+	}
+	#iphone iframe {
+		position: absolute;
+		width: 320px;
+		height: 416px;
+		top: 160px;
+		left: 56px;
+		border: 0;
+	}
+	
+	#scroll {
+		position: absolute;
+		right: 430px;
+		top: 364px;
+		white-space: nowrap;
+		color: #666666;
+		line-height: 16px;
+		padding: 6px;
+		border: 1px solid white;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-webkit-background-clip: padding-box;
+		border-radius: 5px;
+		-moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+		-webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+		background: #dfdfdf url(../images/scroll-bg.png) repeat-x top;
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		background-size: 100% 100%;
+		background: -moz-linear-gradient(
+			top,
+			#f6f6f6,
+			#dfdfdf
+		);
+		background: -webkit-gradient(
+			linear,
+			left top, left bottom,
+			from(#f6f6f6),
+			to(#dfdfdf)
+		);
+		-webkit-transform: rotate(90deg) translate(0, -42px);
+		-moz-transform: rotate(90deg) translate(0, -42px);
+		transform: rotate(90deg) translate(0, -42px);
+		}
+		#scroll img {
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+			padding: 4px;
+			margin: -4px 2px -8px -4px;
+			border: 1px solid #ccc;
+			-moz-border-radius: 3px;
+			-webkit-border-radius: 3px;
+			-webkit-background-clip: padding-box;
+			border-radius: 3px;
+			cursor: pointer;
+			}
+			#scroll img:hover {
+				background: #e0e0e0;
+				border-color: #b0b0b0;
+			}
+		#scroll span {
+			padding: 0 2px 0 5px;
+			font-size: 10px;
+			text-transform: uppercase;
+			color: #999;
+		}
+	
+	#notes {
+		position: absolute;
+		width: 160px;
+		color: white;
+		padding: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		-webkit-background-clip: padding-box;
+		border-radius: 10px;
+		top: 241px;
+		left: 420px;
+		text-align: left;
+		}
+		#notes h2 {
+			font-size: 18px;
+			line-height: 21px;
+			margin-bottom: 10px;
+			padding-left: 20px;
+		}
+		#notes p {
+			margin-bottom: 10px;
+			padding-left: 20px;
+			}
+			#notes p img {
+				float: left;
+				margin-left: -20px;
+			}
+			#notes p:last-child {
+				margin-bottom: 0;
+			}
+		#notes a {
+			color: white;
+		}
+
+footer {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 9;
+}

@@ -1,0 +1,222 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html lang="en" class="no-js ie ie7"><![endif]-->
+<!--[if IE 8 ]><html lang="en" class="no-js ie"><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Constellation Admin Skin</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="robots" content="none">
+	
+	<!-- Mobile metas -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+	<!-- Combined stylesheets load -->
+	<link href="css/miniafd1.css?files=reset,common,form,standard,special-pages,simple-lists" rel="stylesheet" type="text/css">
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon-large.png">
+	
+	<!-- Modernizr for support detection, all javascript libs are moved right above </body> for better performance -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+	
+	<!--
+	
+	This file is from the demo website of the Constellation Admin Skin
+	
+	If you like it and wish to use it, please consider buying it on ThemeForest:
+	http://themeforest.net/item/constellation-complete-admin-skin/116461
+	
+	Thanks!
+	
+	-->
+	
+</head>
+
+<!-- the 'special-page' class is only an identifier for scripts -->
+<body class="special-page error-bg red dark">
+	
+	<section id="error-desc">
+		
+		<ul class="action-tabs with-children-tip children-tip-left">
+			<li><a href="javascript:history.back()" title="Go back"><img src="images/icons/fugue/navigation-180.png" width="16" height="16"></a></li>
+			<li><a href="javascript:window.location.reload()" title="Reload page"><img src="images/icons/fugue/arrow-circle.png" width="16" height="16"></a></li>
+		</ul>
+		
+		<ul class="action-tabs right with-children-tip children-tip-right">
+			<li><a href="#" title="Show/hide<br>error details" onClick="$(document.body).toggleClass('with-log'); return false;">
+				<img src="images/icons/fugue/application-monitor.png" width="16" height="16">
+			</a></li>
+		</ul>
+		
+		<div class="block-border"><div class="block-content">
+				
+			<h1>Admin</h1>
+			<div class="block-header">System error</div>
+			
+			<h2>Error description</h2>
+			
+			<h5>Message</h5>
+			<p>An error occurred while processing your request. Please return to the previous page and check everything before trying again. If the same error occurs again, please contact your system administrator or report error (see below).</p>
+			
+			<p><b>Event type:</b> error<br>
+			<b>Page:</b> /demo/constellation/template/error.php</p>
+			
+			<form class="form" id="send-report" method="post" action="http://www.display-inline.fr/demo/constellation/template/_errors/sendReport.php">
+				<input type="hidden" name="report" id="report" value="96n3o4q5v584h263y274x2t2x2x244v2q2q214g2l4y4x574o313i284q4p4g4o4r3k2p3t4n4k4g223s395r2l5n5g4m444w2j5m4f4k4q4j5c4c41416f4g4n4d5p2y584l4j4k484l4b4d5n2k5q4n4n4o4q2y5l5k4r324d2l4t4m4i5c4j4b24344t2u2k2r3j464s40634l584i213i2w3f4a4m564o5m4a4c4e2q4j5v5d4i5k5f4c463h206c4k4l4g2y3a26494t5b4b273r3y314b4n4g4d4x4n2x254t2b5v294h4p4k4u5e5t4q5w5z3u2v4w43634o254b4r5f4w3n2k5l4f4s41674q5f494n4h4m4f42444k4k5l4l4k474o4n595r2m506l4m4q4v2w5f4h4b2q2o3c494e4m5g2z223d4m2o364n4h4s4c4p4q4r3y2p383q4k48343u5m563d5w5z3r483b4i4j2g4h4q4n5f4e4j4f463x3w2j543m344q4l494w4h2z2y3w3t544p483r4g4k495i4d526z3r483l4p5f244d474x5j413w3r3c4g4r4k574z3q4q444o434b283h424h4n2e4c454p416i5m4w3g43334v2b4i4f2t2r263a5n2c494j424f45416y3y533k4c4g2a4d47406j4g444f2e4l4m4l5i5p2460644n444j2i4733433l2q5f47474m5a4g273h4y31454a3b2e484d4p4m503b5v2h4h48304w595o4d52633j4h4b3c5l4x3l424y5w3k403j583g2g4z5h4z5j4r4i26373x3t2j523n394n4q474t4y344l2d5w5z3r444t4c5r413m4i4g4w3e4w31624l45416y3y533k4c4g2a4d47406j4g444f2e4l4m4l5i5p2460644n444j2i4733433u2c403w3n2j5839213h4y314f4h45344l4x3q4d5k4b5s414s463g4r5l374t5j5m4q49354q3d4g4j494j5l2n4i4i5m4x3j2j423g553x2138334o284j482848314v2i4d4k495i4d526z3r444t4c5r413d4f4m334c41406p42354r384t5l4b484t2u4j474x5w3p3a353a483u2g4d40444k553f2x2z2g434o2d4f4g4w3e4w31624l4541623a5q2t4f4a334f42416w3z58314v2i4d4k495i4d526z3r483l4p5f244d474x5j413w3r3c4g4r4k574z3q4q444o434b283h424h4n2n4d4p49426x4540616q4m4q4d4v35313x3t2g5238264i5i4k4e4h4y314f4h45344l4x3q4d5k4f4k4e4g294g4j5w5n4i4e5d2d4n4r4j5c4m2o4o4f5g4w3a2j46334b3w3f4f5c4k4i26373x3t2j523n3n2j494j494m4h5j4u5j5c4l4d4v2j5m4e4g263a5n2c494j424f4541623a5q2t4f4a334f463d5n2r5h47344k443u5m5c2k5u544q4r4a3c5h274g4o4h554l2n4z574h454r343e454a3f2h45313244424h4g2u2y2630454p5d4j4e5h473k4i4o3a4d424p4x513w3a2n5l4j4c4m5n216l494j444h23363j523r3h49474r4n4n5v523h4e5q294a3h284x213x3t2q5942303d5t2m4l4j4c2y3d2r4n494a4c4g2f4a2f4t4h4g294g4j5w5n4i4e5d2n4h4c406m4m2d4f4x5k48294k5l4f4u216h4u5b2v4c4s4f4m2i4q5e4k5t2o4o47474r5r5b4d5s35334m4540673d4a4e2h5c414j40673x3j2n5h4w564d4o2v4p424m4d5a2h48374a324r2m5i5h4w5e5q2a4n4n4z5r464d4i4f5k494f4v524o2t4m5f4u5f494n4d434o2b4z5i4u5q4r2o4e4k4i495r2j5k4b2b3g2l4p5l4649263g523v2p2h424o2b4j403m364g484b4i4h3l4i544n494p494m25406v55466y3w2o2p293c5u2d4a483a5e4w3k4h4i4a4h2k5e4f5m4r44344h274l4z534k5t2s4q474k4e5n363h4k55334v2d4l5k4g4x3t2h5f4e4j416b4d4l4i5m4n5i4m4z3v2r464j4x5c4g5s4a444t29406v5j4z544j4f4o493c5u23433e2i482c494v5b49293j54394w283z3v2943343p3c4u59494x3p49406t3w274z33334v2l4p593x3f424y503c494p394d4a406l4f4z3i294n4p444b424n4x594l444g263i4f563d55474c4l4o4c5u244g4k4x5k454c4t574l4i4w5g4a5q2s484l4n4d4741654b5v2a4q4o4j406z3k4p5y53334v2b4i4f25392i4n5e45482h4843343e423a5q2a45363f2a4k4q5k445r4a4q4m2l2i495r2t5r55334m493c5u2m4d483o3t4">
+				<fieldset class="grey-bg no-margin collapse">
+					<legend><a href="#">Report error</a></legend>
+					
+					<p>
+						<label for="description" class="light float-left">To report this error, please explain how it happened and click below:</label>
+						<textarea name="description" id="description" class="full-width" rows="4"></textarea>
+					</p>
+					
+					<p>
+						<label for="report-sender" class="grey">Your e-mail address (optional)</label>
+						<span class="float-left"><button type="submit" class="full-width">Report</button></span>
+						<input type="text" name="sender" id="sender" value="" class="full-width">
+					</p>
+				</fieldset>
+			</form>
+		</div></div>
+	</section>
+	
+	<section id="error-log">
+		<div class="block-border"><div class="block-content">
+				
+			<h1>Error details</h1>
+			
+			<div class="fieldset grey-bg with-margin">
+				<p><b>Message</b><br>
+				Undefined variable: test</p>
+			</div>
+			
+			<ul class="picto-list">
+				<li class="icon-tag-small"><b>Php error level:</b> 256</li>
+				<li class="icon-doc-small"><b>File:</b> /demo/constellation/template/error.php</li>
+				<li class="icon-pin-small"><b>Line:</b> 58</li>
+			</ul>
+			
+			<ul class="collapsible-list with-bg">
+				<li class="close">
+					<b class="toggle"></b>
+					<span><b>Context:</b></span>
+					<ul class="with-icon no-toggle-icon">
+						<li class="close">
+							<b class="toggle"></b>
+							<span><b>$options:</b> array(5)</span>
+							<ul>
+								<li class="force-wrap"><span><b>'id_user':</b> 42</span></li>
+								<li class="force-wrap"><span><b>'logged':</b> false</span></li>
+								<li class="close">
+									<b class="toggle"></b>
+									<span><b>'groups':</b> array(3)</span>
+									<ul>
+										<li class="force-wrap"><span><b>0:</b> 4</span></li>
+										<li class="force-wrap"><span><b>1:</b> 5</span></li>
+										<li class="force-wrap"><span><b>2:</b> 12</span></li>
+									</ul>
+								</li>
+								<li class="force-wrap"><span><b>'resetPassword':</b> false</span></li>
+								<li class="force-wrap"><span><b>'mail':</b> 'name@domaine.com'</span></li>
+							</ul>
+						</li>
+						<li class="force-wrap"><span><b>$i:</b> 12</span></li>
+						<li class="force-wrap"><span><b>$id_user:</b> 42</span></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<h2>Stack backtrace</h2>
+			<ul class="picto-list icon-top with-line-spacing">
+				<li class="force-wrap"><b>/demo/constellation/template/error.php</b> @ line <b>71</b>: checkLoadData(array(5))</li>
+				<li class="force-wrap"><b>/demo/constellation/template/error.php</b> @ line <b>75</b>: loadUser(42)</li>
+				<li class="force-wrap"><b>/demo/constellation/template/error.php</b> @ line <b>79</b>: initUser()</li>
+			</ul>
+			
+		</div></div>
+	</section>
+
+	<!--
+	
+	Updated as v1.5:
+	Libs are moved here to improve performance
+	
+	-->
+	
+	<!-- Combined JS load -->
+	<script src="js/mini5667.php?files=libs/jquery-1.6.3.min,common,standard,jquery.tip,list"></script>
+	<!--[if lte IE 8]><script src="js/standard.ie.js"></script><![endif]-->
+	
+	<!-- Ajax error report -->
+	<script>
+	
+		$(document).ready(function()
+		{
+			$('#send-report').submit(function(event)
+			{
+				// Stop full page load
+				event.preventDefault();
+				
+				var submitBt = $(this).find('button[type=submit]');
+				submitBt.disableBt();
+					
+				// Target url
+				var target = $(this).attr('action');
+				if (!target || target == '')
+				{
+					// Page url without hash
+					target = document.location.href.match(/^([^#]+)/)[1];
+				}
+				
+				// Request
+				var data = {
+					a: $('#a').val(),
+					report: $('#report').val(),
+					description: $('#description').val(),
+					sender: $('#sender').val()
+				};
+				
+				// Send
+				$.ajax({
+					url: target,
+					dataType: 'json',
+					type: 'POST',
+					data: data,
+					success: function(data, textStatus, XMLHttpRequest)
+					{
+						if (data.valid)
+						{
+							$('#send-report').removeBlockMessages().blockMessage('Report sent, thank you for your help!', {type: 'success'});
+						}
+						else
+						{
+							// Message
+							$('#send-report').removeBlockMessages().blockMessage('An unexpected error occured, please try again', {type: 'error'});
+							
+							submitBt.enableBt();
+						}
+					},
+					error: function(XMLHttpRequest, textStatus, errorThrown)
+					{
+						// Message
+						$('#send-report').removeBlockMessages().blockMessage('Error while contacting server, please try again', {type: 'error'});
+						
+						submitBt.enableBt();
+					}
+				});
+				
+				// Message
+				$('#send-report').removeBlockMessages().blockMessage('Please wait, sending report...', {type: 'loading'});
+			});
+		});
+	
+	</script>
+	
+</body>
+</html>

@@ -159,14 +159,15 @@ div.pieza .ld {
 	height: 50px;
 	margin-left: 0px;
 	float: left;
-	background-size: contain;
+	background-size: 25px;
 	background-repeat: no-repeat;
+	background-position-x:-15px;
 }
 div.pieza .li {
 	width: 10px;
 	height: 50px;
 	margin-left: 50px;
-	background-size: contain;
+	background-size: 25px;
 	background-repeat: no-repeat;
 }
 /*.contDiast {
